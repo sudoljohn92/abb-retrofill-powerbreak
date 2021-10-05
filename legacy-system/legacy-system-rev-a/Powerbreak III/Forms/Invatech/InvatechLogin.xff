@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form>
+  <General>
+    <Magic>"NICEForm"</Magic>
+    <ShowSpecialVars>true</ShowSpecialVars>
+    <ProgramVersion>"5.4.0 "</ProgramVersion>
+    <FileVersion>23</FileVersion>
+  </General>
+  <Window>
+    <IsMaximized>true</IsMaximized>
+    <Background/>
+  </Window>
+  <Objects>
+    <Text>
+      <Left>351</Left>
+      <Top>339</Top>
+      <Height>32</Height>
+      <Width>139</Width>
+      <ZOrder>17</ZOrder>
+      <Name>"Text6"</Name>
+      <Caption>"Password:"</Caption>
+      <Color>16777215</Color>
+      <IsTransparent>true</IsTransparent>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-27</Height>
+        <Size>20</Size>
+        <CharacterSet>0</CharacterSet>
+        <Style>
+          <Bold>true</Bold>
+        </Style>
+      </Font>
+    </Text>
+    <Text>
+      <Left>335</Left>
+      <Top>299</Top>
+      <Height>32</Height>
+      <Width>155</Width>
+      <ZOrder>16</ZOrder>
+      <Name>"Text5"</Name>
+      <Caption>"User Name:"</Caption>
+      <Color>16777215</Color>
+      <IsTransparent>true</IsTransparent>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-27</Height>
+        <Size>20</Size>
+        <CharacterSet>0</CharacterSet>
+        <Style>
+          <Bold>true</Bold>
+        </Style>
+      </Font>
+    </Text>
+    <Frame>
+      <Left>307</Left>
+      <Top>281</Top>
+      <Height>124</Height>
+      <Width>529</Width>
+      <ZOrder>3</ZOrder>
+      <Name>"Frame1"</Name>
+      <LineWidth>3</LineWidth>
+    </Frame>
+    <Text>
+      <Left>791</Left>
+      <Top>50</Top>
+      <Height>57</Height>
+      <Width>274</Width>
+      <ZOrder>11</ZOrder>
+      <Name>"Text4"</Name>
+      <Caption>"(860) 491-1166\r\nFor Supplies and Technical Support\r\nInvatech@Invatech.com"</Caption>
+      <Color>16777215</Color>
+      <IsTransparent>true</IsTransparent>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-16</Height>
+        <Size>12</Size>
+        <Color>-2147483640</Color>
+        <CharacterSet>0</CharacterSet>
+        <Style>
+          <Bold>true</Bold>
+        </Style>
+      </Font>
+      <Alignment>
+        <Multiline>2</Multiline>
+      </Alignment>
+    </Text>
+    <Picture>
+      <Left>662</Left>
+      <Top>16</Top>
+      <Height>130</Height>
+      <Width>150</Width>
+      <ZOrder>2</ZOrder>
+      <Name>"Picture2"</Name>
+      <FileName>"C:\Users\Dick\Desktop\Customer Folders\EnvelopesAndMore\LABELING SYSTEM\E&amp;More_INSTALL FILES\E&amp;More_LabelingSystem\EnvelopesAndMore\Graphics\invatech to curves small.jpg"</FileName>
+      <Embedded>true</Embedded>
+    <EmbeddedData Compressed="False"><![CDATA[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
+QClKUB//2Q==]]></EmbeddedData></Picture>
+    <Text>
+      <Left>368</Left>
+      <Top>227</Top>
+      <Height>41</Height>
+      <Width>413</Width>
+      <ZOrder>21</ZOrder>
+      <Name>"Text1"</Name>
+      <Caption>"INVATECH ADMIN LOGIN"</Caption>
+      <Color>16777215</Color>
+      <IsTransparent>true</IsTransparent>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-35</Height>
+        <Size>26</Size>
+        <CharacterSet>0</CharacterSet>
+        <Style>
+          <Bold>true</Bold>
+        </Style>
+      </Font>
+    </Text>
+    <Text>
+      <Left>849</Left>
+      <Top>112</Top>
+      <Height>19</Height>
+      <Width>145</Width>
+      <ZOrder>12</ZOrder>
+      <Name>"Text16"</Name>
+      <Caption>"www.invatech.com"</Caption>
+      <Color>16777215</Color>
+      <IsTransparent>true</IsTransparent>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-16</Height>
+        <Size>12</Size>
+        <Color>-2147483640</Color>
+        <CharacterSet>0</CharacterSet>
+        <Style>
+          <Bold>true</Bold>
+        </Style>
+      </Font>
+    </Text>
+    <Text>
+      <Left>75</Left>
+      <Top>0</Top>
+      <Height>155</Height>
+      <Width>105</Width>
+      <ZOrder>14</ZOrder>
+      <Name>"Text3"</Name>
+      <Caption>"g"</Caption>
+      <Color>16777215</Color>
+      <IsTransparent>true</IsTransparent>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"GELogoFont"</Name>
+        <Height>-145</Height>
+        <Size>109</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+    </Text>
+    <Text>
+      <Left>198</Left>
+      <Top>81</Top>
+      <Height>32</Height>
+      <Width>162</Width>
+      <ZOrder>13</ZOrder>
+      <Name>"Text2"</Name>
+      <Caption>"GE ENERGY"</Caption>
+      <Color>16777215</Color>
+      <IsTransparent>true</IsTransparent>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-27</Height>
+        <Size>20</Size>
+        <CharacterSet>0</CharacterSet>
+        <Style>
+          <Bold>true</Bold>
+        </Style>
+      </Font>
+    </Text>
+    <EditField>
+      <Left>495</Left>
+      <Top>295</Top>
+      <Height>40</Height>
+      <Width>251</Width>
+      <ZOrder>18</ZOrder>
+      <TabOrder>0</TabOrder>
+      <Variable>"User"</Variable>
+      <Name>"Edit Field3"</Name>
+      <Color>-16777211</Color>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-27</Height>
+        <Size>20</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <Length>20</Length>
+      <PasswordChar>"*"</PasswordChar>
+    </EditField>
+    <EditField>
+      <Left>495</Left>
+      <Top>335</Top>
+      <Height>40</Height>
+      <Width>251</Width>
+      <ZOrder>15</ZOrder>
+      <TabOrder>1</TabOrder>
+      <Variable>"pwd"</Variable>
+      <Name>"Edit Field1"</Name>
+      <Color>-16777211</Color>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-27</Height>
+        <Size>20</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <PasswordChar>"*"</PasswordChar>
+    </EditField>
+    <Button>
+      <Left>462</Left>
+      <Top>419</Top>
+      <Height>69</Height>
+      <Width>218</Width>
+      <ZOrder>20</ZOrder>
+      <TabOrder>2</TabOrder>
+      <Name>"Button1"</Name>
+      <Caption>"OPEN STATION"</Caption>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-16</Height>
+        <Size>12</Size>
+        <CharacterSet>0</CharacterSet>
+        <Style>
+          <Bold>true</Bold>
+        </Style>
+      </Font>
+      <Actions>
+        <Action>
+          <Type>12</Type>
+          <IgnoreFailure>false</IgnoreFailure>
+          <ScriptLines>
+            <ScriptLine>"If User = "1nVatech" AND pwd = "286" Then"</ScriptLine>
+            <ScriptLine>"   ValidUser = "True""</ScriptLine>
+            <ScriptLine>"Else"</ScriptLine>
+            <ScriptLine>"   MsgBox "Please Enter a Valid User and Password""</ScriptLine>
+            <ScriptLine>"   ValidUser = "False""</ScriptLine>
+            <ScriptLine>"End If"</ScriptLine>
+          </ScriptLines>
+        </Action>
+        <Action>
+          <Type>12</Type>
+          <Condition>"ValidUser = "False""</Condition>
+          <IgnoreFailure>false</IgnoreFailure>
+          <ScriptLines>
+            <ScriptLine>"User = """</ScriptLine>
+            <ScriptLine>"pwd = """</ScriptLine>
+            <ScriptLine>"MoveToNextForm = "False""</ScriptLine>
+          </ScriptLines>
+        </Action>
+        <Action>
+          <Type>21</Type>
+          <Condition>"ValidUser = "False""</Condition>
+          <IgnoreFailure>false</IgnoreFailure>
+          <SelectedObject>"Edit Field3 - User"</SelectedObject>
+        </Action>
+        <Action>
+          <Type>12</Type>
+          <Condition>"ValidUser = "True""</Condition>
+          <IgnoreFailure>false</IgnoreFailure>
+          <ScriptLines>
+            <ScriptLine>"FirstTime = "False""</ScriptLine>
+            <ScriptLine>"MoveToNextForm = "True""</ScriptLine>
+          </ScriptLines>
+        </Action>
+        <Action>
+          <Type>14</Type>
+          <Condition>"ValidUser = "True""</Condition>
+          <IgnoreFailure>false</IgnoreFailure>
+          <FileName>"C:\Powerbreak III\System\InvatechOnetime.txt"</FileName>
+          <CreateNewFile>true</CreateNewFile>
+          <SelectedVars>
+            <SelectedVar>"FirstTime"</SelectedVar>
+          </SelectedVars>
+        </Action>
+        <Action>
+          <Type>5</Type>
+          <Condition>"ValidUser = "True""</Condition>
+          <IgnoreFailure>false</IgnoreFailure>
+          <FormFileName>"C:\Powerbreak III\Forms\Invatech.xff"</FormFileName>
+        </Action>
+      </Actions>
+      <Colors>
+        <Pressed>-16777201</Pressed>
+        <Shadow>8421504</Shadow>
+      </Colors>
+      <DisplayProgress>false</DisplayProgress>
+    </Button>
+    <Button>
+      <Left>462</Left>
+      <Top>504</Top>
+      <Height>69</Height>
+      <Width>218</Width>
+      <ZOrder>19</ZOrder>
+      <TabOrder>3</TabOrder>
+      <Name>"Button2"</Name>
+      <Caption>"EXIT"</Caption>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-16</Height>
+        <Size>12</Size>
+        <CharacterSet>0</CharacterSet>
+        <Style>
+          <Bold>true</Bold>
+        </Style>
+      </Font>
+      <Actions>
+        <Action>
+          <Type>12</Type>
+          <IgnoreFailure>false</IgnoreFailure>
+          <ScriptLines>
+            <ScriptLine>"FirstTime = "True""</ScriptLine>
+          </ScriptLines>
+        </Action>
+        <Action>
+          <Type>14</Type>
+          <IgnoreFailure>false</IgnoreFailure>
+          <FileName>"C:\Powerbreak III\System\InvatechOnetime.txt"</FileName>
+          <CreateNewFile>true</CreateNewFile>
+          <SelectedVars>
+            <SelectedVar>"FirstTime"</SelectedVar>
+          </SelectedVars>
+        </Action>
+        <Action>
+          <Type>9</Type>
+          <IgnoreFailure>false</IgnoreFailure>
+        </Action>
+      </Actions>
+      <Colors>
+        <Pressed>-16777201</Pressed>
+        <Shadow>8421504</Shadow>
+      </Colors>
+      <DisplayProgress>false</DisplayProgress>
+    </Button>
+  </Objects>
+  <Variables>
+    <InternalVariables>
+      <InternalVariable>
+        <Name>"User"</Name>
+        <Length>20</Length>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"ValidUser"</Name>
+        <Length>5</Length>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"pwd"</Name>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"FirstTime"</Name>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"MoveToNextForm"</Name>
+      </InternalVariable>
+    </InternalVariables>
+  </Variables>
+  <SerialPorts/>
+  <Events>
+    <OnLoad/>
+    <OnClose>
+      <Actions>
+        <Action>
+          <Type>12</Type>
+          <Condition>"MoveToNextForm = "True""</Condition>
+          <IgnoreFailure>false</IgnoreFailure>
+          <ScriptLines>
+            <ScriptLine>"WriteLineToFile "C:\Powerbreak III\System\OneTime.txt", "False""</ScriptLine>
+          </ScriptLines>
+        </Action>
+      </Actions>
+    </OnClose>
+    <OnTimer/>
+  </Events>
+</Form>

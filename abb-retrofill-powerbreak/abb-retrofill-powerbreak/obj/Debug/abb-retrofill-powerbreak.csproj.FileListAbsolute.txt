@@ -1,0 +1,12 @@
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\abb-retrofill-powerbreak.exe.config
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\abb-retrofill-powerbreak.exe
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\abb-retrofill-powerbreak.pdb
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.csprojAssemblyReference.cache
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.load_form.resources
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.Properties.Resources.resources
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.csproj.GenerateResource.cache
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.csproj.CoreCompileInputs.cache
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.exe
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.pdb
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.menu.main_menu.resources
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.misc_forms.login_form.resources

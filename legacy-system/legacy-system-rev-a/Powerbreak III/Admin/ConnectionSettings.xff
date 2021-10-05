@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form>
+  <General>
+    <Magic>"NICEForm"</Magic>
+    <ProgramVersion>"5.4.1 "</ProgramVersion>
+    <FileVersion>23</FileVersion>
+  </General>
+  <Window>
+    <Position>2</Position>
+    <Left>10</Left>
+    <Top>10</Top>
+    <Height>366</Height>
+    <Width>662</Width>
+    <Background/>
+  </Window>
+  <Objects>
+    <Text>
+      <Left>41</Left>
+      <Top>259</Top>
+      <Height>23</Height>
+      <Width>168</Width>
+      <ZOrder>19</ZOrder>
+      <Name>"Text2"</Name>
+      <Caption>" Application Status "</Caption>
+      <Color>16777215</Color>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-20</Height>
+        <Size>12</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+    </Text>
+    <Text>
+      <Left>280</Left>
+      <Top>9</Top>
+      <Height>16</Height>
+      <Width>108</Width>
+      <ZOrder>9</ZOrder>
+      <Name>"Text3"</Name>
+      <Caption>"SQL Server Name:"</Caption>
+      <Color>12632256</Color>
+      <IsTransparent>true</IsTransparent>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+    </Text>
+    <Text>
+      <Left>11</Left>
+      <Top>164</Top>
+      <Height>16</Height>
+      <Width>79</Width>
+      <ZOrder>23</ZOrder>
+      <Name>"Text7"</Name>
+      <Caption>"ODBC Name:"</Caption>
+      <Color>12632256</Color>
+      <IsTransparent>true</IsTransparent>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+    </Text>
+    <Frame>
+      <Left>31</Left>
+      <Top>270</Top>
+      <Height>89</Height>
+      <Width>434</Width>
+      <ZOrder>2</ZOrder>
+      <Name>"Frame1"</Name>
+      <LineColor>-16777196</LineColor>
+      <Style>2</Style>
+      <Shape>1</Shape>
+    </Frame>
+    <Text>
+      <Left>20</Left>
+      <Top>130</Top>
+      <Height>16</Height>
+      <Width>70</Width>
+      <ZOrder>10</ZOrder>
+      <Name>"Text1"</Name>
+      <Caption>"Access DB:"</Caption>
+      <Color>12632256</Color>
+      <IsTransparent>true</IsTransparent>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+    </Text>
+    <Text>
+      <Left>303</Left>
+      <Top>65</Top>
+      <Height>16</Height>
+      <Width>85</Width>
+      <ZOrder>17</ZOrder>
+      <Name>"Text5"</Name>
+      <Caption>"DB Username:"</Caption>
+      <Color>12632256</Color>
+      <IsTransparent>true</IsTransparent>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+    </Text>
+    <Text>
+      <Left>291</Left>
+      <Top>37</Top>
+      <Height>16</Height>
+      <Width>97</Width>
+      <ZOrder>16</ZOrder>
+      <Name>"Text4"</Name>
+      <Caption>"Database Name:"</Caption>
+      <Color>12632256</Color>
+      <IsTransparent>true</IsTransparent>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+    </Text>
+    <Text>
+      <Left>305</Left>
+      <Top>94</Top>
+      <Height>16</Height>
+      <Width>83</Width>
+      <ZOrder>18</ZOrder>
+      <Name>"Text6"</Name>
+      <Caption>"DB Password:"</Caption>
+      <Color>12632256</Color>
+      <IsTransparent>true</IsTransparent>
+      <IsBestFit>true</IsBestFit>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+    </Text>
+    <RadioGroup>
+      <Left>30</Left>
+      <Top>1</Top>
+      <Height>110</Height>
+      <Width>200</Width>
+      <ZOrder>22</ZOrder>
+      <TabOrder>1</TabOrder>
+      <Variable>"DBType"</Variable>
+      <Name>"Radio Group1"</Name>
+      <TabOrder>1</TabOrder>
+      <ParentBackground>false</ParentBackground>
+      <Color>16777215</Color>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <Values>
+        <Custom>
+          <Values>""Access (ACCDB)","Access (MDB)",ODBC,SQL"</Values>
+        </Custom>
+      </Values>
+    </RadioGroup>
+    <EditField>
+      <Left>96</Left>
+      <Top>126</Top>
+      <Height>24</Height>
+      <Width>456</Width>
+      <ZOrder>27</ZOrder>
+      <TabOrder>2</TabOrder>
+      <Variable>"AccessDBLocation"</Variable>
+      <Name>"Edit Field1"</Name>
+      <Color>-16777211</Color>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <Length>500</Length>
+    </EditField>
+    <Button>
+      <Left>557</Left>
+      <Top>122</Top>
+      <Height>33</Height>
+      <Width>89</Width>
+      <ZOrder>11</ZOrder>
+      <TabOrder>4</TabOrder>
+      <Name>"Button2"</Name>
+      <Caption>"Browse"</Caption>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <Actions>
+        <Action>
+          <Type>27</Type>
+          <IgnoreFailure>false</IgnoreFailure>
+          <BrowseType>0</BrowseType>
+          <Filter>"Database Files (*.dbf, *.db, *.mdb, *.xls, *.accdb)|*.dbf;*.db;*.mdb;*.xls; *.accdb"</Filter>
+          <InitialDir>"C:\Powerbreak III\"</InitialDir>
+          <Title>"Select Database File"</Title>
+          <FileNameVariable>"AccessDBLocation"</FileNameVariable>
+        </Action>
+      </Actions>
+      <Colors>
+        <Pressed>-16777201</Pressed>
+        <Shadow>8421504</Shadow>
+      </Colors>
+      <DisplayProgress>false</DisplayProgress>
+    </Button>
+    <EditField>
+      <Left>394</Left>
+      <Top>5</Top>
+      <Height>24</Height>
+      <Width>252</Width>
+      <ZOrder>12</ZOrder>
+      <TabOrder>5</TabOrder>
+      <Variable>"SQLServer"</Variable>
+      <Name>"Edit Field3"</Name>
+      <Color>-16777211</Color>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <Length>400</Length>
+    </EditField>
+    <EditField>
+      <Left>394</Left>
+      <Top>33</Top>
+      <Height>24</Height>
+      <Width>252</Width>
+      <ZOrder>13</ZOrder>
+      <TabOrder>6</TabOrder>
+      <Variable>"DatabaseName"</Variable>
+      <Name>"Edit Field4"</Name>
+      <Color>-16777211</Color>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <Length>499</Length>
+    </EditField>
+    <EditField>
+      <Left>394</Left>
+      <Top>61</Top>
+      <Height>24</Height>
+      <Width>100</Width>
+      <ZOrder>14</ZOrder>
+      <TabOrder>7</TabOrder>
+      <Variable>"SQLUserName"</Variable>
+      <Name>"Edit Field5"</Name>
+      <Color>-16777211</Color>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <Length>40</Length>
+    </EditField>
+    <EditField>
+      <Left>394</Left>
+      <Top>90</Top>
+      <Height>24</Height>
+      <Width>100</Width>
+      <ZOrder>15</ZOrder>
+      <TabOrder>8</TabOrder>
+      <Variable>"SQLPassword"</Variable>
+      <Name>"Edit Field6"</Name>
+      <Color>-16777211</Color>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <Length>40</Length>
+      <PasswordChar>"*"</PasswordChar>
+    </EditField>
+    <Button>
+      <Left>127</Left>
+      <Top>193</Top>
+      <Height>63</Height>
+      <Width>408</Width>
+      <ZOrder>25</ZOrder>
+      <TabOrder>9</TabOrder>
+      <Name>"Button3"</Name>
+      <Caption>"Save Database Options"</Caption>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <Actions>
+        <Action>
+          <Type>12</Type>
+          <IgnoreFailure>false</IgnoreFailure>
+          <ScriptLines>
+            <ScriptLine>"Dim SQLData, AccessDataMDB, AccessDataACCDB, AccessMDBCheck, AccessACCDBCheck, n, ODBCInfo"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"SQLData = "DB_Type = ""SQL""" &amp; VBCRLF &amp; _"</ScriptLine>
+            <ScriptLine>""DB_ServerName = """ &amp; SQLServer &amp; """" &amp; VBCRLF &amp; _"</ScriptLine>
+            <ScriptLine>""DB_DatabaseName = """ &amp; DatabaseName &amp; """" &amp; VBCRLF &amp; _"</ScriptLine>
+            <ScriptLine>""DB_Authentication = ""SQL""" &amp; VBCRLF &amp; _"</ScriptLine>
+            <ScriptLine>""DB_UserName = """ &amp; SQLUserName &amp; """" &amp; VBCRLF &amp; _"</ScriptLine>
+            <ScriptLine>""DB_Password = """ &amp; SQLPassword &amp; """""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"AccessDataMDB = "DB_Type = ""AccessMDB""" &amp; VBCRLF &amp; _"</ScriptLine>
+            <ScriptLine>""DB_Location = """ &amp; AccessDBLocation &amp; """""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"AccessDataACCDB = "DB_Type = ""AccessACCDB""" &amp; VBCRLF &amp; _"</ScriptLine>
+            <ScriptLine>""DB_Location = """ &amp; AccessDBLocation &amp; """""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"ODBCInfo = "DB_Type = ""ODBC""" &amp; VBCRLF &amp; _"</ScriptLine>
+            <ScriptLine>""DB_Location = """ &amp; ODBCName &amp; """""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"Const ForReading = 1, ForWriting = 2"</ScriptLine>
+            <ScriptLine>"Dim fso, f"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"If DBType = "SQL" Then"</ScriptLine>
+            <ScriptLine>"   f.Write SQLData"</ScriptLine>
+            <ScriptLine>"ElseIf DBType = "Access (MDB)" Then"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"   AccessMDBCheck = Split(AccessDBLocation, ".", -1,1)"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"   If AccessMDBCheck(1) = "mdb" OR AccessMDBCheck(1) = "MDB" Then"</ScriptLine>
+            <ScriptLine>"      MsgBox "Database Path Saved Successfully""</ScriptLine>
+            <ScriptLine>"      Set fso = CreateObject("Scripting.FileSystemObject")"</ScriptLine>
+            <ScriptLine>"      Set f = fso.OpenTextFile("C:\Powerbreak III\System\ulc39difw.x3g", ForWriting, True)"</ScriptLine>
+            <ScriptLine>"      f.write AccessDataMDB"</ScriptLine>
+            <ScriptLine>"   Else"</ScriptLine>
+            <ScriptLine>"      MsgBox "ERROR: The database you have selected does not match the database" &amp; VBCRLF &amp; _"</ScriptLine>
+            <ScriptLine>"             "option you have selected.""</ScriptLine>
+            <ScriptLine>"   End If"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"ElseIf DBType = "Access (ACCDB)" Then"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"   AccessACCDBCheck = Split(AccessDBLocation, ".", -1,1)"</ScriptLine>
+            <ScriptLine>"   "</ScriptLine>
+            <ScriptLine>"   If AccessACCDBCheck(1) = "accdb" OR AccessACCDBCheck(1) = "ACCDB" Then"</ScriptLine>
+            <ScriptLine>"      MsgBox "Database Path Saved Successfully""</ScriptLine>
+            <ScriptLine>"      Set fso = CreateObject("Scripting.FileSystemObject")"</ScriptLine>
+            <ScriptLine>"      Set f = fso.OpenTextFile("C:\Powerbreak III\System\ulc39difw.x3g", ForWriting, True)"</ScriptLine>
+            <ScriptLine>"      f.write AccessDataACCDB"</ScriptLine>
+            <ScriptLine>"   Else"</ScriptLine>
+            <ScriptLine>"      MsgBox "ERROR: The database you have selected does not match the database" &amp; VBCRLF &amp; _"</ScriptLine>
+            <ScriptLine>"             "option you have selected.""</ScriptLine>
+            <ScriptLine>"   End If"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"ElseIf DBType = "ODBC" Then"</ScriptLine>
+            <ScriptLine>"      MsgBox "Database Path Saved Successfully""</ScriptLine>
+            <ScriptLine>"      Set fso = CreateObject("Scripting.FileSystemObject")"</ScriptLine>
+            <ScriptLine>"      Set f = fso.OpenTextFile("C:\Powerbreak III\System\ulc39difw.x3g", ForWriting, True)"</ScriptLine>
+            <ScriptLine>"      f.write ODBCInfo"</ScriptLine>
+            <ScriptLine>"End If"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+          </ScriptLines>
+        </Action>
+      </Actions>
+      <Colors>
+        <Pressed>-16777201</Pressed>
+        <Shadow>8421504</Shadow>
+      </Colors>
+      <DisplayProgress>false</DisplayProgress>
+    </Button>
+    <CheckBox>
+      <Left>61</Left>
+      <Top>303</Top>
+      <Height>28</Height>
+      <Width>85</Width>
+      <ZOrder>28</ZOrder>
+      <TabOrder>10</TabOrder>
+      <Variable>"AppOnline"</Variable>
+      <Name>"Check Box1"</Name>
+      <Color>16777215</Color>
+      <Caption>"Online"</Caption>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-20</Height>
+        <Size>12</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <Values>
+        <Checked>"TRUE"</Checked>
+        <Unchecked>"FALSE"</Unchecked>
+        <OnClick>
+          <Actions>
+            <Action>
+              <Type>3</Type>
+              <IgnoreFailure>false</IgnoreFailure>
+              <Variable>"AppOffline"</Variable>
+              <Value>"FALSE"</Value>
+            </Action>
+          </Actions>
+        </OnClick>
+      </Values>
+    </CheckBox>
+    <CheckBox>
+      <Left>160</Left>
+      <Top>303</Top>
+      <Height>28</Height>
+      <Width>92</Width>
+      <ZOrder>20</ZOrder>
+      <TabOrder>11</TabOrder>
+      <Variable>"AppOffline"</Variable>
+      <Name>"Check Box2"</Name>
+      <Color>16777215</Color>
+      <Caption>"Offline"</Caption>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-20</Height>
+        <Size>12</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <Values>
+        <Checked>"TRUE"</Checked>
+        <Unchecked>"FALSE"</Unchecked>
+        <OnClick>
+          <Actions>
+            <Action>
+              <Type>3</Type>
+              <IgnoreFailure>false</IgnoreFailure>
+              <Variable>"AppOnline"</Variable>
+              <Value>"FALSE"</Value>
+            </Action>
+          </Actions>
+        </OnClick>
+      </Values>
+    </CheckBox>
+    <Button>
+      <Left>263</Left>
+      <Top>281</Top>
+      <Height>69</Height>
+      <Width>190</Width>
+      <ZOrder>21</ZOrder>
+      <TabOrder>12</TabOrder>
+      <Name>"Button1"</Name>
+      <Caption>"Save Application Status"</Caption>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-20</Height>
+        <Size>12</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <Actions>
+        <Action>
+          <Type>12</Type>
+          <Condition>"AppOffLine = "TRUE""</Condition>
+          <IgnoreFailure>false</IgnoreFailure>
+          <ScriptLines>
+            <ScriptLine>"WriteLineToFile "C:\Powerbreak III\System\AppStatus.ini", "APP OFFLINE""</ScriptLine>
+          </ScriptLines>
+        </Action>
+        <Action>
+          <Type>12</Type>
+          <Condition>"AppOnLine = "TRUE""</Condition>
+          <IgnoreFailure>false</IgnoreFailure>
+          <ScriptLines>
+            <ScriptLine>"WriteLineToFile "C:\Powerbreak III\System\AppStatus.ini", "APP ONLINE""</ScriptLine>
+          </ScriptLines>
+        </Action>
+      </Actions>
+      <Colors>
+        <Pressed>-16777201</Pressed>
+        <Shadow>8421504</Shadow>
+      </Colors>
+      <WordWrap>true</WordWrap>
+      <DisplayProgress>false</DisplayProgress>
+    </Button>
+    <EditField>
+      <Left>96</Left>
+      <Top>160</Top>
+      <Height>24</Height>
+      <Width>456</Width>
+      <ZOrder>24</ZOrder>
+      <TabOrder>13</TabOrder>
+      <Variable>"ODBCName"</Variable>
+      <Name>"Edit Field2"</Name>
+      <Color>-16777211</Color>
+      <Font>
+        <Name>"Arial"</Name>
+        <Height>-13</Height>
+        <Size>8</Size>
+        <CharacterSet>0</CharacterSet>
+      </Font>
+      <Length>500</Length>
+    </EditField>
+  </Objects>
+  <Variables>
+    <InternalVariables>
+      <InternalVariable>
+        <Name>"DBType"</Name>
+        <Length>50</Length>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"AccessDBLocation"</Name>
+        <Length>500</Length>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"AccessTable"</Name>
+        <Length>150</Length>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"SQLServer"</Name>
+        <Length>400</Length>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"DatabaseName"</Name>
+        <Length>499</Length>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"Authentication"</Name>
+        <DefaultValue>"SQL"</DefaultValue>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"SQLUserName"</Name>
+        <Length>40</Length>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"SQLPassword"</Name>
+        <Length>40</Length>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"AppOnline"</Name>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"AppOffline"</Name>
+      </InternalVariable>
+      <InternalVariable>
+        <Name>"ODBCName"</Name>
+        <Length>500</Length>
+      </InternalVariable>
+    </InternalVariables>
+  </Variables>
+  <SerialPorts/>
+  <Events>
+    <OnLoad>
+      <Actions>
+        <Action>
+          <Type>12</Type>
+          <IgnoreFailure>false</IgnoreFailure>
+          <ScriptLines>
+            <ScriptLine>"Dim DB_Type, DB_ServerName, DB_DatabaseName, DB_UserName, DB_Password, FileContents"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"'NW - Reads the configuration file (ulc39difw.x3g)to get the current connection string."</ScriptLine>
+            <ScriptLine>"'This file contains the current configuration for the database location."</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"Const ForReading = 1"</ScriptLine>
+            <ScriptLine>"Set fso = CreateObject("Scripting.FileSystemObject")"</ScriptLine>
+            <ScriptLine>"Set MyFile = fso.OpenTextFile("C:\Powerbreak III\System\ulc39difw.x3g", ForReading)"</ScriptLine>
+            <ScriptLine>"FileContents = MyFile.ReadAll"</ScriptLine>
+            <ScriptLine>"FileContents = split(FileContents, VBCRLF)"</ScriptLine>
+            <ScriptLine>"Set MyFile = nothing"</ScriptLine>
+            <ScriptLine>"Set fso = nothing"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"Dim conn, rs, SQL"</ScriptLine>
+            <ScriptLine>"Set conn = CreateObject("ADODB.Connection")"</ScriptLine>
+            <ScriptLine>"Set rs = CreateObject("ADODB.RecordSet")"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"If (Replace(split(FileContents(0), " = """)(1), """", "") = "SQL") Then"</ScriptLine>
+            <ScriptLine>"   SQLServer = Replace(split(FileContents(1), " = """)(1), """", "")"</ScriptLine>
+            <ScriptLine>"   DatabaseName = Replace(split(FileContents(2), " = """)(1), """", "")"</ScriptLine>
+            <ScriptLine>"   DB_Authentication = "SQL""</ScriptLine>
+            <ScriptLine>"   SQLUserName = Replace(split(FileContents(4), " = """)(1), """", "")"</ScriptLine>
+            <ScriptLine>"   SQLPassword = Replace(split(FileContents(5), " = """)(1), """", "")"</ScriptLine>
+            <ScriptLine>"   DBType = "SQL""</ScriptLine>
+            <ScriptLine>"ElseIf (Replace(split(FileContents(0), " = """)(1), """", "") = "AccessACCDB") Then"</ScriptLine>
+            <ScriptLine>"   AccessDBLocation = Replace(split(FileContents(1), " = """)(1), """", "")"</ScriptLine>
+            <ScriptLine>"   DBType = "Access (ACCDB)""</ScriptLine>
+            <ScriptLine>"ElseIf (Replace(split(FileContents(0), " = """)(1), """", "") = "AccessMDB") Then"</ScriptLine>
+            <ScriptLine>"   AccessDBLocation = Replace(split(FileContents(1), " = """)(1), """", "")"</ScriptLine>
+            <ScriptLine>"   DBType = "Access (MDB)""</ScriptLine>
+            <ScriptLine>"ElseIf (Replace(split(FileContents(0), " = """)(1), """", "") = "ODBC") Then"</ScriptLine>
+            <ScriptLine>"   ODBCName = Replace(split(FileContents(1), " = """)(1), """", "")"</ScriptLine>
+            <ScriptLine>"   DBType = "ODBC""</ScriptLine>
+            <ScriptLine>"End If"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"'App Status allows the administrator to signify if the application is offline/online."</ScriptLine>
+            <ScriptLine>"'At this point, we don't have anything in the application for online/offline; however,"</ScriptLine>
+            <ScriptLine>"'if the customer wanted to move in this direction, we could build in a default"</ScriptLine>
+            <ScriptLine>"'check to move all of the read/write information to a local database."</ScriptLine>
+            <ScriptLine>"Dim AppStatus"</ScriptLine>
+            <ScriptLine>"AppStatus = ReadLineFromFile("C:\Powerbreak III\System\AppStatus.ini")"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>"Select Case AppStatus"</ScriptLine>
+            <ScriptLine>"   Case "APP ONLINE""</ScriptLine>
+            <ScriptLine>"      AppOnline = "TRUE""</ScriptLine>
+            <ScriptLine>"      AppOffline = "FALSE""</ScriptLine>
+            <ScriptLine>"   Case "APP OFFLINE""</ScriptLine>
+            <ScriptLine>"      AppOffline = "TRUE""</ScriptLine>
+            <ScriptLine>"      AppOnline = "FALSE""</ScriptLine>
+            <ScriptLine>"End Select"</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+            <ScriptLine>""</ScriptLine>
+          </ScriptLines>
+        </Action>
+      </Actions>
+    </OnLoad>
+    <OnClose/>
+    <OnTimer/>
+  </Events>
+</Form>

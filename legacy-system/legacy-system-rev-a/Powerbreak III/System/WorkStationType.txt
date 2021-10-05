@@ -1,0 +1,2 @@
+﻿"WorkStationType";"RequiredUserAccessLevel";"CallingForm"
+"2/3 POLE SIDE BARCODE";"3";"C:\STEY\Forms\2or3PoleBarcodeLabeling\2-3PoleSideBarcode.xff"

@@ -1,0 +1,2 @@
+﻿"ULCounterFile2Pole";"ULIssueNumFile"
+"C:\ProgramData\erawecin\ULCounter2Pole.txt";"C:\ProgramData\erawecin\ULIssueNum.txt"

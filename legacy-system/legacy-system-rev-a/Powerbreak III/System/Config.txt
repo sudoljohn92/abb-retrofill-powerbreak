@@ -1,0 +1,2 @@
+﻿"FiscalOffset";"FOPlusMinus"
+"5";"-"

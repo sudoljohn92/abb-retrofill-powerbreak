@@ -1,0 +1,2 @@
+DB_Type = "AccessACCDB"
+DB_Location = "C:\GE VB QC MRB\Database\QCmrb.accdb"
