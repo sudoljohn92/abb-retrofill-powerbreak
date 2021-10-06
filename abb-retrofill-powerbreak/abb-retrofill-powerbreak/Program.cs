@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using abb_retrofill_powerbreak.retrofill;
 using System.Windows.Forms;
 
 namespace abb_retrofill_powerbreak
@@ -16,7 +14,7 @@ namespace abb_retrofill_powerbreak
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new load_form());
+            Application.Run(new retrofill.retrofill());
         }
     }
 }
