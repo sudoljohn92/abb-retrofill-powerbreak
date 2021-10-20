@@ -48,6 +48,9 @@ namespace abb_retrofill_powerbreak.retrofill
                 /*
                  * TEST
                  * R3FLH2HERXR4GXXL4XXO
+                 * 
+                 * R5XXG1HERXR4GXXL4XXO
+                 * R6XXP1HERXR4GXXL4XXO
                  * VARIABLES FFOR FUUZED FASCIA R
                  * VAL A - 3
                  * VAL C - 600 static with fuzed
