@@ -1,6 +1,5 @@
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\abb-retrofill-powerbreak.exe
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\abb-retrofill-powerbreak.pdb
-C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.csprojAssemblyReference.cache
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.load_form.resources
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.Properties.Resources.resources
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.csproj.GenerateResource.cache
@@ -20,7 +19,6 @@ C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powe
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\System.Memory.xml
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\System.Numerics.Vectors.xml
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.csproj.CopyComplete
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\abb-retrofill-powerbreak.exe.config
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\EntityFramework.dll
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\EntityFramework.SqlServer.dll
@@ -30,3 +28,6 @@ C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powe
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\EntityFramework.xml
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\EntityFramework.SqlServer.xml
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\System.Data.SQLite.xml
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\SDK.NET.Interface.dll
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\SDK.NET.Interface.xml
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.csproj.AssemblyReference.cache
