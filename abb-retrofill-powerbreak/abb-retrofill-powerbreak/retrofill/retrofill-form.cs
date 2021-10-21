@@ -37,6 +37,8 @@ namespace abb_retrofill_powerbreak.retrofill
         private retrofill_data_handler retro_data_handler { get; set; }
         private database dbConnection { get; set; }
         private label_files label_paths { get; set; }
+        private unfuzed_values unfuzed_label_values { get; set; }
+        public List<string> unfuzedlist { get; set; }
         public retrofill()
         {
             InitializeComponent();
@@ -191,21 +193,20 @@ namespace abb_retrofill_powerbreak.retrofill
             }
         }
 
-        private void preview_side_label()
+        private void preview_retro_fac_unfuzede_label()
         {
-            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_paths.retrofill_side_label);
-            label.Variables["A9"].SetValue(txt_catalog_number.Text);
-            label.Variables["A43"].SetValue(txt_catalog_number.Text);
-            label.Variables["A10"].SetValue(txt_catalog_number.Text);
-            label.Variables["A44"].SetValue(txt_catalog_number.Text);
-            label.Variables["A11"].SetValue(txt_catalog_number.Text);
-            label.Variables["A45"].SetValue(txt_catalog_number.Text);
-            label.Variables["A35"].SetValue(txt_catalog_number.Text);
-            label.Variables["A36"].SetValue(txt_catalog_number.Text);
-            label.Variables["A37"].SetValue(txt_catalog_number.Text);
-            label.Variables["A38"].SetValue(txt_catalog_number.Text);
-            label.Variables["W"].SetValue(txt_catalog_number.Text);
-            label.Variables["P"].SetValue(txt_catalog_number.Text);
+            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_paths.retrofil_unfuzed_label);
+            label.Variables["CatNum"].SetValue(txt_catalog_number.Text);
+            label.Variables["SerialNum"].SetValue(txt_sn.Text);
+            label.Variables["ValB"].SetValue(unfuzed_label_values.valB);
+            label.Variables["ValC"].SetValue(unfuzed_label_values.valC);
+            label.Variables["ValD"].SetValue(unfuzed_label_values.valD);
+            label.Variables["ValE"].SetValue(unfuzed_label_values.valE);
+            label.Variables["ValF"].SetValue(unfuzed_label_values.valF);
+            label.Variables["ValG"].SetValue(unfuzed_label_values.valG);
+            label.Variables["ValH"].SetValue(unfuzed_label_values.valH);
+            label.Variables["ValI"].SetValue(unfuzed_label_values.valI);
+            label.Variables["ValJ"].SetValue(unfuzed_label_values.valJ);
             ILabelPreviewSettings labelPreviewSettings = new LabelPreviewSettings();
             labelPreviewSettings.ImageFormat = "PNG";
             labelPreviewSettings.Width = this.picbox_retro.Width;
@@ -229,6 +230,71 @@ namespace abb_retrofill_powerbreak.retrofill
             }
         }
 
+        private void preview_side_label()
+        {
+            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_paths.retrofill_side_label);
+            label.Variables["A9"].SetValue(side_label_cat_1);
+            label.Variables["A43"].SetValue(side_label_type_1);
+            label.Variables["A10"].SetValue(side_label_cat_2);
+            label.Variables["A44"].SetValue(side_label_type_2);
+            label.Variables["A11"].SetValue(side_label_cat_3);
+            label.Variables["A45"].SetValue(side_label_type_3);
+            label.Variables["A35"].SetValue(txt_breaker_type.Text);
+            label.Variables["A36"].SetValue(frame_size);
+            label.Variables["A37"].SetValue("3");
+            label.Variables["A38"].SetValue(txt_interrupt_at_508.Text);
+            label.Variables["W"].SetValue(first_six);
+            label.Variables["P"].SetValue(char_13);
+            ILabelPreviewSettings labelPreviewSettings = new LabelPreviewSettings();
+            labelPreviewSettings.ImageFormat = "PNG";
+            labelPreviewSettings.Width = this.picbox_side.Width;
+            labelPreviewSettings.Height = this.picbox_side.Height;
+            labelPreviewSettings.FormatPreviewSide = FormatPreviewSide.FrontSide;
+
+            // Generate Preview File
+            object imageObj = label.GetLabelPreview(labelPreviewSettings);
+
+            // Display image in UI
+            if (imageObj is byte[])
+            {
+                // When PrintToFiles = false
+                // Convert byte[] to Bitmap and set as image source for PictureBox control
+                this.picbox_side.Image = this.ByteToImage((byte[])imageObj);
+            }
+            else if (imageObj is string)
+            {
+                // When PrintToFiles = true
+                this.picbox_side.ImageLocation = (string)imageObj;
+            }
+        }
+
+        private void preview_caution_label()
+        {
+            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_paths.retrofill_caution_label);
+            label.Variables["Caution_Line1"].SetValue(txt_caution_1.Text);
+            label.Variables["Caution_Line2"].SetValue(txt_caution_2.Text);
+            ILabelPreviewSettings labelPreviewSettings = new LabelPreviewSettings();
+            labelPreviewSettings.ImageFormat = "PNG";
+            labelPreviewSettings.Width = this.picbox_caution.Width;
+            labelPreviewSettings.Height = this.picbox_caution.Height;
+            labelPreviewSettings.FormatPreviewSide = FormatPreviewSide.FrontSide;
+
+            // Generate Preview File
+            object imageObj = label.GetLabelPreview(labelPreviewSettings);
+
+            // Display image in UI
+            if (imageObj is byte[])
+            {
+                // When PrintToFiles = false
+                // Convert byte[] to Bitmap and set as image source for PictureBox control
+                this.picbox_caution.Image = this.ByteToImage((byte[])imageObj);
+            }
+            else if (imageObj is string)
+            {
+                // When PrintToFiles = true
+                this.picbox_caution.ImageLocation = (string)imageObj;
+            }
+        }
         private void txt_catalog_number_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -275,10 +341,12 @@ namespace abb_retrofill_powerbreak.retrofill
                     //MessageBox.Show(frame_size + sensor_size);
                     //MessageBox.Show(side_label_cat_1 + " " + side_label_type_1 + " " + side_label_cat_2 + " " + " " + side_label_type_2 + " " + " " + side_label_cat_3 + " " + " " + side_label_type_3 + " ");
                     preview_retro_face_label();
+                    preview_side_label();
                 }
                 else if (isFuzed == false)
                 {
                     /*
+                     * R304I1HERXR4GXXL4XXO
                      * * VAL A - 3
                      * VAL L - DATECODE
                      * VAL P - 800A char 5 sensor frame size
@@ -297,26 +365,51 @@ namespace abb_retrofill_powerbreak.retrofill
                      * VAL K - USER DEFINED
                      * INSERT FUNCTION TO FIND ALL THIS DATA
                      */
-                    frame_size = retro_data_handler.find_fuzed_frame_sensor(char_5);
-                    sensor_size = frame_size;
-                    List<string> char_list = dbConnection.find_side_label_values(char_13);
-                    for (int i = 0; i < char_list.Count; i++)
+                    unfuzed_label_values = new unfuzed_values();
+                    unfuzedlist = dbConnection.find_unfuzed_values(first_six);
+                    if (unfuzedlist.Count > 0)
                     {
-                        side_label_cat_1 = char_list[1].ToString();
-                        side_label_type_1 = char_list[2].ToString();
+                        frame_size = retro_data_handler.find_fuzed_frame_sensor(char_5);
+                        sensor_size = frame_size;
+                        List<string> char_list = dbConnection.find_side_label_values(char_13);
+                        for (int i = 0; i < char_list.Count; i++)
+                        {
+                            side_label_cat_1 = char_list[1].ToString();
+                            side_label_type_1 = char_list[2].ToString();
 
-                        side_label_cat_2 = char_list[3].ToString();
-                        side_label_type_2 = char_list[4].ToString();
+                            side_label_cat_2 = char_list[3].ToString();
+                            side_label_type_2 = char_list[4].ToString();
 
-                        side_label_cat_3 = char_list[5].ToString();
-                        side_label_type_3 = char_list[6].ToString();
+                            side_label_cat_3 = char_list[5].ToString();
+                            side_label_type_3 = char_list[6].ToString();
+                        }
+                        add_unfuzed_values();
+                        preview_retro_fac_unfuzede_label();
+                        preview_side_label();
+
                     }
-                    MessageBox.Show(frame_size + sensor_size);
-                    MessageBox.Show(side_label_cat_1 + " " + side_label_type_1 + " " + side_label_cat_2 + " " + " " + side_label_type_2 + " " + " " + side_label_cat_3 + " " + " " + side_label_type_3 + " ");
+                    else if(unfuzedlist.Count == 0)
+                    {
+                        MessageBox.Show("Error: Interrupt Values have not been defined. Please add the Interrupt Values in via the 'Add Interrupt Feature'");
+                    }
+                    //MessageBox.Show(frame_size + sensor_size);
+                    //MessageBox.Show(side_label_cat_1 + " " + side_label_type_1 + " " + side_label_cat_2 + " " + " " + side_label_type_2 + " " + " " + side_label_cat_3 + " " + " " + side_label_type_3 + " ");
                 }
             }
         }
 
+        private void add_unfuzed_values()
+        {
+            unfuzed_label_values.valB = unfuzedlist[0].ToString();
+            unfuzed_label_values.valC = unfuzedlist[1].ToString();
+            unfuzed_label_values.valD = unfuzedlist[2].ToString();
+            unfuzed_label_values.valE = unfuzedlist[3].ToString();
+            unfuzed_label_values.valF = unfuzedlist[4].ToString();
+            unfuzed_label_values.valG = unfuzedlist[5].ToString();
+            unfuzed_label_values.valH = unfuzedlist[6].ToString();
+            unfuzed_label_values.valI = unfuzedlist[7].ToString();
+            unfuzed_label_values.valJ = unfuzedlist[8].ToString();
+        }
         private string generate_new_date_code()
         {
             string year_a = DateTime.Now.ToString("yyyy").Substring(3, 1);
@@ -366,6 +459,31 @@ namespace abb_retrofill_powerbreak.retrofill
         private void textBox6_Leave(object sender, EventArgs e)
         {
             preview_retro_face_label();
+        }
+
+        private void txt_breaker_type_Leave(object sender, EventArgs e)
+        {
+            preview_side_label();
+        }
+
+        private void txt_interrupt_at_508_Leave(object sender, EventArgs e)
+        {
+            preview_side_label();
+        }
+
+        private void txt_caution_1_Leave(object sender, EventArgs e)
+        {
+            preview_caution_label();
+        }
+
+        private void txt_caution_2_Leave(object sender, EventArgs e)
+        {
+            preview_caution_label();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

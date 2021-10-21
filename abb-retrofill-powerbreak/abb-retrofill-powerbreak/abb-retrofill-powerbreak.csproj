@@ -87,6 +87,7 @@
     <Compile Include="data-handlers\data-handler.cs" />
     <Compile Include="data-handlers\db_connections.cs" />
     <Compile Include="labels\label_files.cs" />
+    <Compile Include="labels\unfuzed_values.cs" />
     <Compile Include="load_form\load_form.cs">
       <SubType>Form</SubType>
     </Compile>

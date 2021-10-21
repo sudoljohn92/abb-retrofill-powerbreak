@@ -30,6 +30,7 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -37,7 +38,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -52,6 +52,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(95, 67);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -63,6 +64,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(576, 59);
             this.panel2.TabIndex = 5;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(227, 15);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 31);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Close";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -135,19 +149,6 @@
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(227, 15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 31);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Close";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // login_form
             // 

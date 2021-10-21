@@ -11,5 +11,6 @@ namespace abb_retrofill_powerbreak.labels
         public readonly string retrofill_label = @"C:\Projects\abb-retrofill-powerbreak\labels\retrofill\10108386_fascia_r-fused.nlbl";
         public readonly string retrofill_caution_label = @"C:\Projects\abb-retrofill-powerbreak\labels\retrofill\caution goddex-black.nlbl";
         public readonly string retrofill_side_label = @"C:\Projects\abb-retrofill-powerbreak\labels\retrofill\RotterdamSidelabel.nlbl";
+        public readonly string retrofil_unfuzed_label = @"C:\Projects\abb-retrofill-powerbreak\labels\retrofill\10108386_fascia_R.nlbl";
     }
 }

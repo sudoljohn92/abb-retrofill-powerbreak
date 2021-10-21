@@ -21,5 +21,10 @@ namespace abb_retrofill_powerbreak.misc_forms
             Hide();
             main.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
