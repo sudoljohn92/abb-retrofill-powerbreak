@@ -5,6 +5,7 @@ namespace abb_retrofill_powerbreak.data_handlers
 {
     class database
     {
+        public List<string> char_4_power_list { get; set; }
         public List<string> char_13_list { get; set; }
         public List<string> unfuzed_list { get; set; }
         public string sql_lite_connection = "Data Source=C:\\Projects\\abb-retrofill-powerbreak\\abb-retrofill-powerbreak\\abb-retrofill-powerbreak\\abb-power-retro-db.db;";
@@ -56,5 +57,30 @@ namespace abb_retrofill_powerbreak.data_handlers
             }
             return unfuzed_list;
         }
+
+        public List<string> find_powerbreak_char_4(string char_4)
+        {
+            char_4_power_list = new List<string>();
+            using (var connection = new SQLiteConnection(sql_lite_connection))
+            {
+                using (var cmd = new SQLiteCommand("SELECT * FROM tbl_Rating_4 WHERE char_4 LIKE @char4", connection))
+                {
+                    connection.Open();
+                    cmd.Parameters.AddWithValue("@char4", char_4);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            for (int i = 0; i < 9; i++)
+                            {
+                                char_4_power_list.Add(reader[i].ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            return char_4_power_list;
+        }
+
     }
 }
