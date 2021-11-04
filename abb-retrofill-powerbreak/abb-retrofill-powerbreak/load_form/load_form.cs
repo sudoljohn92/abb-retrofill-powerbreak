@@ -1,5 +1,5 @@
 ﻿using System;
-using abb_retrofill_powerbreak.misc_forms;
+using abb_retrofill_powerbreak.menu;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -37,9 +37,9 @@ namespace abb_retrofill_powerbreak
 
         private void openForm()
         {
-            var login = new login_form();
+            var main = new menu.main_menu();
             Hide();
-            login.Show();
+            main.Show();
         }
     }
 }

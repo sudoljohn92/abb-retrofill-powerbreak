@@ -1,6 +1,7 @@
 ﻿using System;
 using abb_retrofill_powerbreak.retrofill;
 using abb_retrofill_powerbreak.powerbreak;
+using abb_retrofill_powerbreak.menu;
 using System.Windows.Forms;
 
 namespace abb_retrofill_powerbreak
@@ -15,7 +16,7 @@ namespace abb_retrofill_powerbreak
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new powerbreak.powerbreak_main());
+            Application.Run(new load_form());
         }
     }
 }

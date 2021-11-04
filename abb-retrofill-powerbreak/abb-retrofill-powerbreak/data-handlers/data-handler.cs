@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,57 @@ namespace abb_retrofill_powerbreak.data_handlers
 {
     class data_handler
     {
+        public string generate_new_date_code()
+        {
+            string year_a = DateTime.Now.ToString("yyyy").Substring(3, 1);
+            GregorianCalendar cal = new GregorianCalendar(GregorianCalendarTypes.Localized);
+            string week_of_year = Convert.ToString(cal.GetWeekOfYear(DateTime.Now, CalendarWeekRule.FirstDay, DayOfWeek.Monday));
+            string year_b = calculate_decade_code(DateTime.Now.ToString("yyyy").Substring(2, 1));
+            return year_a + week_of_year + year_b;
+        }
+        private string calculate_decade_code(string decade_code)
+        {
+            switch (decade_code)
+            {
+                case "4":
+                    return "&";
+                case "3":
+                    return "#";
+                case "2":
+                    return "@";
+                case "1":
+                    return "!";
+                case "0":
+                    return "&";
+            }
+            return "";
+        }
+        public string ul_viewable(string char_16)
+        {
+            switch (char_16)
+            {
+                case "4":
+                    return "";
+                case "5":
+                    return "";
+                case "C":
+                    return "";
+                case "D":
+                    return "";
+                case "L":
+                    return "";
+                case "M":
+                    return "";
+                case "V":
+                    return "";
+                case "W":
+                    return "";
+                default:
+                    return @"C:\Projects\abb-retrofill-powerbreak\images\CuL.jpg";
+            }
+        }
     }
+
 
     class retrofill_data_handler
     {

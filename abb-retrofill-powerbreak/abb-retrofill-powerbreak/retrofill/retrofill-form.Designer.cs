@@ -72,11 +72,18 @@
             this.check_caution = new System.Windows.Forms.CheckBox();
             this.label17 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
+            this.btn_reports = new System.Windows.Forms.Button();
+            this.btn_interrupt = new System.Windows.Forms.Button();
+            this.btn_pwbreak = new System.Windows.Forms.Button();
+            this.btn_menu = new System.Windows.Forms.Button();
+            this.btn_print = new System.Windows.Forms.Button();
+            this.combo_printer = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_retro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -90,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_catalog_number
@@ -533,17 +541,6 @@
             this.pictureBox7.TabIndex = 47;
             this.pictureBox7.TabStop = false;
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(757, 722);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(169, 25);
-            this.label18.TabIndex = 48;
-            this.label18.Text = "Print Information";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
@@ -554,24 +551,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1112, 80);
             this.panel1.TabIndex = 49;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(3, 0);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(98, 86);
-            this.pictureBox8.TabIndex = 7;
-            this.pictureBox8.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 80);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(129, 782);
-            this.panel2.TabIndex = 50;
             // 
             // label19
             // 
@@ -586,6 +565,124 @@
             this.label19.Text = "Retrofill Labels";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(98, 86);
+            this.pictureBox8.TabIndex = 7;
+            this.pictureBox8.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_reports);
+            this.panel2.Controls.Add(this.btn_interrupt);
+            this.panel2.Controls.Add(this.btn_pwbreak);
+            this.panel2.Controls.Add(this.btn_menu);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 80);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(129, 782);
+            this.panel2.TabIndex = 50;
+            // 
+            // btn_reports
+            // 
+            this.btn_reports.BackColor = System.Drawing.Color.Transparent;
+            this.btn_reports.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_reports.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reports.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_reports.Location = new System.Drawing.Point(6, 137);
+            this.btn_reports.Name = "btn_reports";
+            this.btn_reports.Size = new System.Drawing.Size(114, 37);
+            this.btn_reports.TabIndex = 22;
+            this.btn_reports.Text = "Reports";
+            this.btn_reports.UseVisualStyleBackColor = false;
+            // 
+            // btn_interrupt
+            // 
+            this.btn_interrupt.BackColor = System.Drawing.Color.Transparent;
+            this.btn_interrupt.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_interrupt.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_interrupt.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_interrupt.Location = new System.Drawing.Point(6, 94);
+            this.btn_interrupt.Name = "btn_interrupt";
+            this.btn_interrupt.Size = new System.Drawing.Size(114, 37);
+            this.btn_interrupt.TabIndex = 21;
+            this.btn_interrupt.Text = "Interrupts";
+            this.btn_interrupt.UseVisualStyleBackColor = false;
+            // 
+            // btn_pwbreak
+            // 
+            this.btn_pwbreak.BackColor = System.Drawing.Color.Transparent;
+            this.btn_pwbreak.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_pwbreak.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pwbreak.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_pwbreak.Location = new System.Drawing.Point(6, 52);
+            this.btn_pwbreak.Name = "btn_pwbreak";
+            this.btn_pwbreak.Size = new System.Drawing.Size(114, 37);
+            this.btn_pwbreak.TabIndex = 20;
+            this.btn_pwbreak.Text = "Powerbreak";
+            this.btn_pwbreak.UseVisualStyleBackColor = false;
+            this.btn_pwbreak.Click += new System.EventHandler(this.btn_pwbreak_Click);
+            // 
+            // btn_menu
+            // 
+            this.btn_menu.BackColor = System.Drawing.Color.Transparent;
+            this.btn_menu.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_menu.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_menu.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_menu.Location = new System.Drawing.Point(6, 9);
+            this.btn_menu.Name = "btn_menu";
+            this.btn_menu.Size = new System.Drawing.Size(114, 37);
+            this.btn_menu.TabIndex = 19;
+            this.btn_menu.Text = "Main Menu";
+            this.btn_menu.UseVisualStyleBackColor = false;
+            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
+            // 
+            // btn_print
+            // 
+            this.btn_print.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_print.Location = new System.Drawing.Point(926, 807);
+            this.btn_print.Name = "btn_print";
+            this.btn_print.Size = new System.Drawing.Size(94, 30);
+            this.btn_print.TabIndex = 78;
+            this.btn_print.Text = "Print";
+            this.btn_print.UseVisualStyleBackColor = true;
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
+            // 
+            // combo_printer
+            // 
+            this.combo_printer.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_printer.FormattingEnabled = true;
+            this.combo_printer.Location = new System.Drawing.Point(762, 762);
+            this.combo_printer.Name = "combo_printer";
+            this.combo_printer.Size = new System.Drawing.Size(258, 29);
+            this.combo_printer.TabIndex = 77;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(640, 765);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(110, 21);
+            this.label20.TabIndex = 76;
+            this.label20.Text = "Printer Name:";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(757, 724);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(169, 25);
+            this.label21.TabIndex = 75;
+            this.label21.Text = "Print Information";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // retrofill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -593,9 +690,12 @@
             this.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1112, 933);
+            this.Controls.Add(this.btn_print);
+            this.Controls.Add(this.combo_printer);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label18);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.check_caution);
@@ -658,6 +758,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -706,11 +807,18 @@
         private System.Windows.Forms.CheckBox check_caution;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button btn_reports;
+        private System.Windows.Forms.Button btn_interrupt;
+        private System.Windows.Forms.Button btn_pwbreak;
+        private System.Windows.Forms.Button btn_menu;
+        private System.Windows.Forms.Button btn_print;
+        private System.Windows.Forms.ComboBox combo_printer;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
     }
 }

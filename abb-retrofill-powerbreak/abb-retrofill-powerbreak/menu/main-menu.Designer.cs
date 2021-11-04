@@ -32,12 +32,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_retro_fill = new System.Windows.Forms.Button();
-            this.btn_power_break = new System.Windows.Forms.Button();
-            this.btn_history = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_reports = new System.Windows.Forms.Button();
+            this.btn_interrupt = new System.Windows.Forms.Button();
+            this.btn_retro = new System.Windows.Forms.Button();
+            this.btn_pwbreak = new System.Windows.Forms.Button();
+            this.btn_close = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,81 +67,105 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.btn_history);
-            this.panel3.Controls.Add(this.btn_power_break);
-            this.panel3.Controls.Add(this.btn_retro_fill);
+            this.panel3.Controls.Add(this.btn_close);
+            this.panel3.Controls.Add(this.btn_reports);
             this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.btn_interrupt);
+            this.panel3.Controls.Add(this.btn_pwbreak);
+            this.panel3.Controls.Add(this.btn_retro);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 58);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(160, 333);
+            this.panel3.Size = new System.Drawing.Size(141, 333);
             this.panel3.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.foom_logo;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(184, 77);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 62);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 16);
+            this.label1.Location = new System.Drawing.Point(11, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Main Menu";
             // 
-            // btn_retro_fill
+            // pictureBox1
             // 
-            this.btn_retro_fill.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_retro_fill.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_retro_fill.Location = new System.Drawing.Point(11, 56);
-            this.btn_retro_fill.Name = "btn_retro_fill";
-            this.btn_retro_fill.Size = new System.Drawing.Size(137, 33);
-            this.btn_retro_fill.TabIndex = 1;
-            this.btn_retro_fill.Text = "Retrofill Labels";
-            this.btn_retro_fill.UseVisualStyleBackColor = false;
+            this.pictureBox1.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.foom_logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(147, 74);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(146, 62);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
-            // btn_power_break
+            // btn_reports
             // 
-            this.btn_power_break.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_power_break.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_power_break.Location = new System.Drawing.Point(11, 100);
-            this.btn_power_break.Name = "btn_power_break";
-            this.btn_power_break.Size = new System.Drawing.Size(137, 33);
-            this.btn_power_break.TabIndex = 2;
-            this.btn_power_break.Text = "Powerbreak Labels";
-            this.btn_power_break.UseVisualStyleBackColor = false;
+            this.btn_reports.BackColor = System.Drawing.Color.Transparent;
+            this.btn_reports.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_reports.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reports.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_reports.Location = new System.Drawing.Point(11, 171);
+            this.btn_reports.Name = "btn_reports";
+            this.btn_reports.Size = new System.Drawing.Size(114, 37);
+            this.btn_reports.TabIndex = 22;
+            this.btn_reports.Text = "Reports";
+            this.btn_reports.UseVisualStyleBackColor = false;
             // 
-            // btn_history
+            // btn_interrupt
             // 
-            this.btn_history.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_history.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_history.Location = new System.Drawing.Point(11, 145);
-            this.btn_history.Name = "btn_history";
-            this.btn_history.Size = new System.Drawing.Size(137, 33);
-            this.btn_history.TabIndex = 3;
-            this.btn_history.Text = "Label History";
-            this.btn_history.UseVisualStyleBackColor = false;
+            this.btn_interrupt.BackColor = System.Drawing.Color.Transparent;
+            this.btn_interrupt.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_interrupt.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_interrupt.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_interrupt.Location = new System.Drawing.Point(11, 128);
+            this.btn_interrupt.Name = "btn_interrupt";
+            this.btn_interrupt.Size = new System.Drawing.Size(114, 37);
+            this.btn_interrupt.TabIndex = 21;
+            this.btn_interrupt.Text = "Interrupts";
+            this.btn_interrupt.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btn_retro
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(11, 190);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 33);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_retro.BackColor = System.Drawing.Color.Transparent;
+            this.btn_retro.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_retro.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_retro.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_retro.Location = new System.Drawing.Point(11, 43);
+            this.btn_retro.Name = "btn_retro";
+            this.btn_retro.Size = new System.Drawing.Size(114, 37);
+            this.btn_retro.TabIndex = 20;
+            this.btn_retro.Text = "Retrofill";
+            this.btn_retro.UseVisualStyleBackColor = false;
+            this.btn_retro.Click += new System.EventHandler(this.btn_retro_Click);
+            // 
+            // btn_pwbreak
+            // 
+            this.btn_pwbreak.BackColor = System.Drawing.Color.Transparent;
+            this.btn_pwbreak.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_pwbreak.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pwbreak.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_pwbreak.Location = new System.Drawing.Point(11, 86);
+            this.btn_pwbreak.Name = "btn_pwbreak";
+            this.btn_pwbreak.Size = new System.Drawing.Size(114, 37);
+            this.btn_pwbreak.TabIndex = 19;
+            this.btn_pwbreak.Text = "Powerbreak";
+            this.btn_pwbreak.UseVisualStyleBackColor = false;
+            this.btn_pwbreak.Click += new System.EventHandler(this.btn_menu_Click);
+            // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.Transparent;
+            this.btn_close.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_close.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_close.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_close.Location = new System.Drawing.Point(11, 214);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(114, 37);
+            this.btn_close.TabIndex = 23;
+            this.btn_close.Text = "Close";
+            this.btn_close.UseVisualStyleBackColor = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // main_menu
             // 
@@ -154,6 +179,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -176,10 +202,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btn_history;
-        private System.Windows.Forms.Button btn_power_break;
-        private System.Windows.Forms.Button btn_retro_fill;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_reports;
+        private System.Windows.Forms.Button btn_interrupt;
+        private System.Windows.Forms.Button btn_retro;
+        private System.Windows.Forms.Button btn_pwbreak;
+        private System.Windows.Forms.Button btn_close;
     }
 }

@@ -30,5 +30,4 @@ C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powe
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\System.Data.SQLite.xml
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\SDK.NET.Interface.dll
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\SDK.NET.Interface.xml
-C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.csproj.AssemblyReference.cache
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.powerbreak.powerbreak_main.resources

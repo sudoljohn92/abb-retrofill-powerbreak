@@ -160,7 +160,9 @@
   <ItemGroup>
     <None Include="Resources\abb_logo.PNG" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="system_files\ul_issue_num.txt" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background.PNG" />
   </ItemGroup>

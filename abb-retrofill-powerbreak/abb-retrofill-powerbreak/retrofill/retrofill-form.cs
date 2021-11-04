@@ -4,6 +4,8 @@ using SQLitePCL;
 using abb_retrofill_powerbreak.data_handlers;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using abb_retrofill_powerbreak.menu;
+using abb_retrofill_powerbreak.powerbreak;
 using System.Collections.Generic;
 using NiceLabel.SDK;
 using abb_retrofill_powerbreak.labels;
@@ -79,16 +81,27 @@ namespace abb_retrofill_powerbreak.retrofill
             }
         }
 
-        /*private void find_printers()
+        private void find_printers()
         {
-            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_string.mario_kart_box_rev_a);
+            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_paths.retrofill_label);
 
             foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
             {
                 combo_printer.Items.Add(printer.ToString());
             }
-            combo_printer.Text = "Microsoft Print to PDF";
-        }*/
+            foreach (var item in combo_printer.Items)
+            {
+                if (item.ToString() == label.PrintSettings.PrinterName)
+                {
+                    combo_printer.SelectedItem = item.ToString();
+                    break;
+                }
+                else
+                {
+                    combo_printer.Text = "Select Printer Here";
+                }
+            }
+        }
 
         protected void CenterScreen()
         {
@@ -484,6 +497,38 @@ namespace abb_retrofill_powerbreak.retrofill
         private void button2_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void btn_menu_Click(object sender, EventArgs e)
+        {
+            var main = new main_menu();
+            Hide();
+            main.Show();
+        }
+
+        private void btn_pwbreak_Click(object sender, EventArgs e)
+        {
+            var powerbreak = new powerbreak_main();
+            Hide();
+            powerbreak.Show();
+        }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            if (check_retro.Checked)
+            {
+                MessageBox.Show("Print Main Retro");
+            }
+
+            if (check_side.Checked)
+            {
+                MessageBox.Show("Print Side");
+            }
+
+            if (check_caution.Checked)
+            {
+                MessageBox.Show("Print Caution");
+            }
         }
     }
 }
