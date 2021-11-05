@@ -84,6 +84,12 @@
             this.combo_printer = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.combo_side = new System.Windows.Forms.ComboBox();
+            this.combo_caution = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.load_pic_box = new System.Windows.Forms.PictureBox();
+            this.circularProgressBar2 = new CircularProgressBar.CircularProgressBar();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_retro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -98,6 +104,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.load_pic_box)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_catalog_number
@@ -114,7 +121,7 @@
             this.panel5.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
             this.panel5.Controls.Add(this.button2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 862);
+            this.panel5.Location = new System.Drawing.Point(0, 952);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1112, 71);
             this.panel5.TabIndex = 5;
@@ -406,7 +413,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(154, 807);
+            this.label13.Location = new System.Drawing.Point(154, 870);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(182, 21);
             this.label13.TabIndex = 40;
@@ -416,7 +423,7 @@
             // txt_interrupt_at_508
             // 
             this.txt_interrupt_at_508.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_interrupt_at_508.Location = new System.Drawing.Point(342, 804);
+            this.txt_interrupt_at_508.Location = new System.Drawing.Point(342, 867);
             this.txt_interrupt_at_508.Name = "txt_interrupt_at_508";
             this.txt_interrupt_at_508.Size = new System.Drawing.Size(192, 29);
             this.txt_interrupt_at_508.TabIndex = 39;
@@ -426,7 +433,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(154, 762);
+            this.label14.Location = new System.Drawing.Point(154, 796);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(109, 21);
             this.label14.TabIndex = 38;
@@ -436,7 +443,7 @@
             // txt_breaker_type
             // 
             this.txt_breaker_type.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_breaker_type.Location = new System.Drawing.Point(279, 759);
+            this.txt_breaker_type.Location = new System.Drawing.Point(279, 793);
             this.txt_breaker_type.Name = "txt_breaker_type";
             this.txt_breaker_type.Size = new System.Drawing.Size(255, 29);
             this.txt_breaker_type.TabIndex = 37;
@@ -446,7 +453,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(197, 722);
+            this.label15.Location = new System.Drawing.Point(197, 724);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(312, 25);
             this.label15.TabIndex = 36;
@@ -458,7 +465,7 @@
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox5.Location = new System.Drawing.Point(135, 711);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(420, 139);
+            this.pictureBox5.Size = new System.Drawing.Size(420, 230);
             this.pictureBox5.TabIndex = 35;
             this.pictureBox5.TabStop = false;
             // 
@@ -537,7 +544,7 @@
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox7.Location = new System.Drawing.Point(576, 711);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(525, 139);
+            this.pictureBox7.Size = new System.Drawing.Size(525, 230);
             this.pictureBox7.TabIndex = 47;
             this.pictureBox7.TabStop = false;
             // 
@@ -577,6 +584,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel2.Controls.Add(this.btn_reports);
             this.panel2.Controls.Add(this.btn_interrupt);
             this.panel2.Controls.Add(this.btn_pwbreak);
@@ -584,7 +592,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(129, 782);
+            this.panel2.Size = new System.Drawing.Size(129, 872);
             this.panel2.TabIndex = 50;
             // 
             // btn_reports
@@ -612,6 +620,7 @@
             this.btn_interrupt.TabIndex = 21;
             this.btn_interrupt.Text = "Interrupts";
             this.btn_interrupt.UseVisualStyleBackColor = false;
+            this.btn_interrupt.Click += new System.EventHandler(this.btn_interrupt_Click);
             // 
             // btn_pwbreak
             // 
@@ -644,7 +653,7 @@
             // btn_print
             // 
             this.btn_print.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_print.Location = new System.Drawing.Point(926, 807);
+            this.btn_print.Location = new System.Drawing.Point(951, 900);
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(94, 30);
             this.btn_print.TabIndex = 78;
@@ -656,7 +665,7 @@
             // 
             this.combo_printer.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combo_printer.FormattingEnabled = true;
-            this.combo_printer.Location = new System.Drawing.Point(762, 762);
+            this.combo_printer.Location = new System.Drawing.Point(787, 762);
             this.combo_printer.Name = "combo_printer";
             this.combo_printer.Size = new System.Drawing.Size(258, 29);
             this.combo_printer.TabIndex = 77;
@@ -665,11 +674,11 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(640, 765);
+            this.label20.Location = new System.Drawing.Point(600, 765);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(110, 21);
+            this.label20.Size = new System.Drawing.Size(181, 21);
             this.label20.TabIndex = 76;
-            this.label20.Text = "Printer Name:";
+            this.label20.Text = "Fuzed/UnFuzed Printer:";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label21
@@ -683,14 +692,104 @@
             this.label21.Text = "Print Information";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // combo_side
+            // 
+            this.combo_side.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_side.FormattingEnabled = true;
+            this.combo_side.Location = new System.Drawing.Point(787, 808);
+            this.combo_side.Name = "combo_side";
+            this.combo_side.Size = new System.Drawing.Size(258, 29);
+            this.combo_side.TabIndex = 79;
+            // 
+            // combo_caution
+            // 
+            this.combo_caution.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_caution.FormattingEnabled = true;
+            this.combo_caution.Location = new System.Drawing.Point(787, 858);
+            this.combo_caution.Name = "combo_caution";
+            this.combo_caution.Size = new System.Drawing.Size(258, 29);
+            this.combo_caution.TabIndex = 80;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(600, 811);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(143, 21);
+            this.label18.TabIndex = 81;
+            this.label18.Text = "Side Label Printer:";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(600, 858);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(167, 21);
+            this.label22.TabIndex = 82;
+            this.label22.Text = "Caution Label Printer:";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // load_pic_box
+            // 
+            this.load_pic_box.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.load_pic_box.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.load_pic_box.Location = new System.Drawing.Point(498, 442);
+            this.load_pic_box.Name = "load_pic_box";
+            this.load_pic_box.Size = new System.Drawing.Size(167, 136);
+            this.load_pic_box.TabIndex = 83;
+            this.load_pic_box.TabStop = false;
+            this.load_pic_box.Visible = false;
+            // 
+            // circularProgressBar2
+            // 
+            this.circularProgressBar2.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.circularProgressBar2.AnimationSpeed = 500;
+            this.circularProgressBar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.circularProgressBar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold);
+            this.circularProgressBar2.ForeColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar2.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.circularProgressBar2.InnerMargin = 2;
+            this.circularProgressBar2.InnerWidth = -1;
+            this.circularProgressBar2.Location = new System.Drawing.Point(437, 391);
+            this.circularProgressBar2.MarqueeAnimationSpeed = 2000;
+            this.circularProgressBar2.Name = "circularProgressBar2";
+            this.circularProgressBar2.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.circularProgressBar2.OuterMargin = -25;
+            this.circularProgressBar2.OuterWidth = 26;
+            this.circularProgressBar2.ProgressColor = System.Drawing.Color.WhiteSmoke;
+            this.circularProgressBar2.ProgressWidth = 10;
+            this.circularProgressBar2.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.circularProgressBar2.Size = new System.Drawing.Size(288, 243);
+            this.circularProgressBar2.StartAngle = 270;
+            this.circularProgressBar2.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.circularProgressBar2.SubscriptColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar2.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.circularProgressBar2.SubscriptText = ".23";
+            this.circularProgressBar2.SuperscriptColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar2.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.circularProgressBar2.SuperscriptText = "°C";
+            this.circularProgressBar2.TabIndex = 85;
+            this.circularProgressBar2.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.circularProgressBar2.Value = 68;
+            this.circularProgressBar2.Visible = false;
+            // 
             // retrofill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1112, 933);
+            this.ClientSize = new System.Drawing.Size(1112, 1023);
+            this.Controls.Add(this.load_pic_box);
+            this.Controls.Add(this.circularProgressBar2);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.btn_print);
+            this.Controls.Add(this.combo_caution);
+            this.Controls.Add(this.combo_side);
             this.Controls.Add(this.combo_printer);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label21);
@@ -759,6 +858,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.load_pic_box)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -820,5 +920,11 @@
         private System.Windows.Forms.ComboBox combo_printer;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox combo_side;
+        private System.Windows.Forms.ComboBox combo_caution;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.PictureBox load_pic_box;
+        private CircularProgressBar.CircularProgressBar circularProgressBar2;
     }
 }

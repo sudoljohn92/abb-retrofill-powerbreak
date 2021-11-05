@@ -36,6 +36,10 @@ namespace abb_retrofill_powerbreak.powerbreak
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_reports = new System.Windows.Forms.Button();
+            this.btn_interrupt = new System.Windows.Forms.Button();
+            this.btn_retro = new System.Windows.Forms.Button();
+            this.btn_menu = new System.Windows.Forms.Button();
             this.picbox_powerbreak = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,10 +59,8 @@ namespace abb_retrofill_powerbreak.powerbreak
             this.ul_check_box = new System.Windows.Forms.CheckBox();
             this.combo_printer = new System.Windows.Forms.ComboBox();
             this.btn_print = new System.Windows.Forms.Button();
-            this.btn_menu = new System.Windows.Forms.Button();
-            this.btn_retro = new System.Windows.Forms.Button();
-            this.btn_interrupt = new System.Windows.Forms.Button();
-            this.btn_reports = new System.Windows.Forms.Button();
+            this.load_pic_box = new System.Windows.Forms.PictureBox();
+            this.circularProgressBar2 = new CircularProgressBar.CircularProgressBar();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -68,6 +70,7 @@ namespace abb_retrofill_powerbreak.powerbreak
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.load_pic_box)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -139,6 +142,7 @@ namespace abb_retrofill_powerbreak.powerbreak
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel3.Controls.Add(this.btn_reports);
             this.panel3.Controls.Add(this.btn_interrupt);
             this.panel3.Controls.Add(this.btn_retro);
@@ -148,6 +152,61 @@ namespace abb_retrofill_powerbreak.powerbreak
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(129, 463);
             this.panel3.TabIndex = 51;
+            // 
+            // btn_reports
+            // 
+            this.btn_reports.BackColor = System.Drawing.Color.Transparent;
+            this.btn_reports.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_reports.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reports.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_reports.Location = new System.Drawing.Point(7, 144);
+            this.btn_reports.Name = "btn_reports";
+            this.btn_reports.Size = new System.Drawing.Size(114, 37);
+            this.btn_reports.TabIndex = 18;
+            this.btn_reports.Text = "Reports";
+            this.btn_reports.UseVisualStyleBackColor = false;
+            // 
+            // btn_interrupt
+            // 
+            this.btn_interrupt.BackColor = System.Drawing.Color.Transparent;
+            this.btn_interrupt.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_interrupt.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_interrupt.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_interrupt.Location = new System.Drawing.Point(7, 101);
+            this.btn_interrupt.Name = "btn_interrupt";
+            this.btn_interrupt.Size = new System.Drawing.Size(114, 37);
+            this.btn_interrupt.TabIndex = 17;
+            this.btn_interrupt.Text = "Interrupts";
+            this.btn_interrupt.UseVisualStyleBackColor = false;
+            this.btn_interrupt.Click += new System.EventHandler(this.btn_interrupt_Click);
+            // 
+            // btn_retro
+            // 
+            this.btn_retro.BackColor = System.Drawing.Color.Transparent;
+            this.btn_retro.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_retro.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_retro.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_retro.Location = new System.Drawing.Point(7, 59);
+            this.btn_retro.Name = "btn_retro";
+            this.btn_retro.Size = new System.Drawing.Size(114, 37);
+            this.btn_retro.TabIndex = 16;
+            this.btn_retro.Text = "Retrofill";
+            this.btn_retro.UseVisualStyleBackColor = false;
+            this.btn_retro.Click += new System.EventHandler(this.btn_retro_Click);
+            // 
+            // btn_menu
+            // 
+            this.btn_menu.BackColor = System.Drawing.Color.Transparent;
+            this.btn_menu.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_menu.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_menu.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_menu.Location = new System.Drawing.Point(7, 16);
+            this.btn_menu.Name = "btn_menu";
+            this.btn_menu.Size = new System.Drawing.Size(114, 37);
+            this.btn_menu.TabIndex = 15;
+            this.btn_menu.Text = "Main Menu";
+            this.btn_menu.UseVisualStyleBackColor = false;
+            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
             // 
             // picbox_powerbreak
             // 
@@ -195,7 +254,6 @@ namespace abb_retrofill_powerbreak.powerbreak
             this.txt_old_dc.Name = "txt_old_dc";
             this.txt_old_dc.Size = new System.Drawing.Size(248, 29);
             this.txt_old_dc.TabIndex = 64;
-            this.txt_old_dc.Text = " ";
             this.txt_old_dc.Leave += new System.EventHandler(this.txt_old_dc_Leave);
             // 
             // label6
@@ -216,7 +274,6 @@ namespace abb_retrofill_powerbreak.powerbreak
             this.txt_serial_number.Name = "txt_serial_number";
             this.txt_serial_number.Size = new System.Drawing.Size(248, 29);
             this.txt_serial_number.TabIndex = 62;
-            this.txt_serial_number.Text = " ";
             this.txt_serial_number.Leave += new System.EventHandler(this.txt_serial_number_Leave);
             // 
             // label5
@@ -237,7 +294,6 @@ namespace abb_retrofill_powerbreak.powerbreak
             this.txt_cat_number.Name = "txt_cat_number";
             this.txt_cat_number.Size = new System.Drawing.Size(248, 29);
             this.txt_cat_number.TabIndex = 60;
-            this.txt_cat_number.Text = " ";
             this.txt_cat_number.Leave += new System.EventHandler(this.txt_cat_number_Leave);
             // 
             // label4
@@ -258,7 +314,7 @@ namespace abb_retrofill_powerbreak.powerbreak
             this.txt_config.Name = "txt_config";
             this.txt_config.Size = new System.Drawing.Size(248, 29);
             this.txt_config.TabIndex = 58;
-            this.txt_config.Text = " TSSD1C3F2N00G088";
+            this.txt_config.Text = "TSSD1C3F2N00G088";
             this.txt_config.Leave += new System.EventHandler(this.txt_config_Leave);
             // 
             // label3
@@ -345,57 +401,49 @@ namespace abb_retrofill_powerbreak.powerbreak
             this.btn_print.UseVisualStyleBackColor = true;
             this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
-            // btn_menu
+            // load_pic_box
             // 
-            this.btn_menu.BackColor = System.Drawing.Color.Transparent;
-            this.btn_menu.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
-            this.btn_menu.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_menu.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_menu.Location = new System.Drawing.Point(7, 16);
-            this.btn_menu.Name = "btn_menu";
-            this.btn_menu.Size = new System.Drawing.Size(114, 37);
-            this.btn_menu.TabIndex = 15;
-            this.btn_menu.Text = "Main Menu";
-            this.btn_menu.UseVisualStyleBackColor = false;
+            this.load_pic_box.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.load_pic_box.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.load_pic_box.Location = new System.Drawing.Point(422, 265);
+            this.load_pic_box.Name = "load_pic_box";
+            this.load_pic_box.Size = new System.Drawing.Size(103, 84);
+            this.load_pic_box.TabIndex = 86;
+            this.load_pic_box.TabStop = false;
+            this.load_pic_box.Visible = false;
             // 
-            // btn_retro
+            // circularProgressBar2
             // 
-            this.btn_retro.BackColor = System.Drawing.Color.Transparent;
-            this.btn_retro.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
-            this.btn_retro.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_retro.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_retro.Location = new System.Drawing.Point(7, 59);
-            this.btn_retro.Name = "btn_retro";
-            this.btn_retro.Size = new System.Drawing.Size(114, 37);
-            this.btn_retro.TabIndex = 16;
-            this.btn_retro.Text = "Retrofill";
-            this.btn_retro.UseVisualStyleBackColor = false;
-            // 
-            // btn_interrupt
-            // 
-            this.btn_interrupt.BackColor = System.Drawing.Color.Transparent;
-            this.btn_interrupt.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
-            this.btn_interrupt.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_interrupt.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_interrupt.Location = new System.Drawing.Point(7, 101);
-            this.btn_interrupt.Name = "btn_interrupt";
-            this.btn_interrupt.Size = new System.Drawing.Size(114, 37);
-            this.btn_interrupt.TabIndex = 17;
-            this.btn_interrupt.Text = "Interrupts";
-            this.btn_interrupt.UseVisualStyleBackColor = false;
-            // 
-            // btn_reports
-            // 
-            this.btn_reports.BackColor = System.Drawing.Color.Transparent;
-            this.btn_reports.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
-            this.btn_reports.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reports.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_reports.Location = new System.Drawing.Point(7, 144);
-            this.btn_reports.Name = "btn_reports";
-            this.btn_reports.Size = new System.Drawing.Size(114, 37);
-            this.btn_reports.TabIndex = 18;
-            this.btn_reports.Text = "Reports";
-            this.btn_reports.UseVisualStyleBackColor = false;
+            this.circularProgressBar2.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.circularProgressBar2.AnimationSpeed = 500;
+            this.circularProgressBar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.circularProgressBar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold);
+            this.circularProgressBar2.ForeColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar2.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.circularProgressBar2.InnerMargin = 2;
+            this.circularProgressBar2.InnerWidth = -1;
+            this.circularProgressBar2.Location = new System.Drawing.Point(361, 214);
+            this.circularProgressBar2.MarqueeAnimationSpeed = 2000;
+            this.circularProgressBar2.Name = "circularProgressBar2";
+            this.circularProgressBar2.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.circularProgressBar2.OuterMargin = -25;
+            this.circularProgressBar2.OuterWidth = 26;
+            this.circularProgressBar2.ProgressColor = System.Drawing.Color.WhiteSmoke;
+            this.circularProgressBar2.ProgressWidth = 10;
+            this.circularProgressBar2.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.circularProgressBar2.Size = new System.Drawing.Size(224, 191);
+            this.circularProgressBar2.StartAngle = 270;
+            this.circularProgressBar2.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.circularProgressBar2.SubscriptColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar2.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.circularProgressBar2.SubscriptText = ".23";
+            this.circularProgressBar2.SuperscriptColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar2.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.circularProgressBar2.SuperscriptText = "°C";
+            this.circularProgressBar2.TabIndex = 87;
+            this.circularProgressBar2.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.circularProgressBar2.Value = 68;
+            this.circularProgressBar2.Visible = false;
             // 
             // powerbreak_main
             // 
@@ -404,6 +452,8 @@ namespace abb_retrofill_powerbreak.powerbreak
             this.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(928, 614);
+            this.Controls.Add(this.load_pic_box);
+            this.Controls.Add(this.circularProgressBar2);
             this.Controls.Add(this.btn_print);
             this.Controls.Add(this.combo_printer);
             this.Controls.Add(this.ul_check_box);
@@ -443,6 +493,7 @@ namespace abb_retrofill_powerbreak.powerbreak
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.load_pic_box)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,5 +531,7 @@ namespace abb_retrofill_powerbreak.powerbreak
         private System.Windows.Forms.Button btn_interrupt;
         private System.Windows.Forms.Button btn_retro;
         private System.Windows.Forms.Button btn_menu;
+        private System.Windows.Forms.PictureBox load_pic_box;
+        private CircularProgressBar.CircularProgressBar circularProgressBar2;
     }
 }

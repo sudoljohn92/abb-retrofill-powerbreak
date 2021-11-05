@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using abb_retrofill_powerbreak.menu;
 using abb_retrofill_powerbreak.labels;
+using abb_retrofill_powerbreak.retrofill;
 using abb_retrofill_powerbreak.data_handlers;
+using abb_retrofill_powerbreak.misc_forms;
 using System.Windows.Forms;
 using NiceLabel.SDK;
 using System.Reflection;
+using System.Threading;
+using System.Data.SQLite;
 
 namespace abb_retrofill_powerbreak.powerbreak
 {
@@ -36,23 +36,37 @@ namespace abb_retrofill_powerbreak.powerbreak
         public string generated_new_date_code { get; set; }
         public string issue_number { get; set; }
         public string ul_path { get; set; }
+        public bool ul_bool { get; set; }
+        public bool powerbreak_bool { get; set; }
         private List<string> powerbreak_char_4_list { get; set; }
         private label_files powerbreak_label { get; set; }
-        private database powerbreak_char_4_action { get; set; }
+        private database database_class_action { get; set; }
         private data_handler new_date_code { get; set; }
+        private Thread form_initialization_thread;
         public powerbreak_main()
         {
             InitializeComponent();
+            form_initialization_thread = new Thread(new ThreadStart(form_initialize_function));
+            form_initialization_thread.IsBackground = true;
+            form_initialization_thread.Start();
+        }
+
+        private void form_initialize_function()
+        {
+            CheckForIllegalCrossThreadCalls = false;
+            load_pic_box.Visible = true;
+            circularProgressBar2.Visible = true;
             InitializePrintEngine();
             powerbreak_label = new label_files();
-            powerbreak_char_4_action = new database();
+            database_class_action = new database();
             new_date_code = new data_handler();
             generated_new_date_code = "RT" + new_date_code.generate_new_date_code();
             find_printers();
             read_issue_num();
             preview_label();
+            load_pic_box.Visible = false;
+            circularProgressBar2.Visible = false;
         }
-
         private void InitializePrintEngine()
         {
             try
@@ -145,6 +159,7 @@ namespace abb_retrofill_powerbreak.powerbreak
             if(config_number.Substring(0,1) != "T")
             {
                 config_number = "T" + txt_config.Text;
+                txt_config.Text = config_number;
             }
             char_2 = config_number.Substring(1, 1);
             sensor_size = config_number.Substring(4, 1);
@@ -153,14 +168,25 @@ namespace abb_retrofill_powerbreak.powerbreak
             char_16 = config_number.Substring(15, 1);
             generate_char_2_value(char_2);
             generate_char_4_data(sensor_size);
-            rating_plug = powerbreak_char_4_action.generate_ratings_plug(char_5, char_9);
+            rating_plug = database_class_action.generate_ratings_plug(char_5, char_9);
             ul_path = new_date_code.ul_viewable(char_16);
+            ul_bool = ul_bool_init(ul_path);
             update_powerbreak_label(); 
         }
-
+        private bool ul_bool_init(string _ul_path)
+        {
+            if(_ul_path == @"C:\Projects\abb-retrofill-powerbreak\images\CuL.jpg")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void generate_char_4_data(string char_4)
         {
-            powerbreak_char_4_list = powerbreak_char_4_action.find_powerbreak_char_4(char_4);
+            powerbreak_char_4_list = database_class_action.find_powerbreak_char_4(char_4);
             amps_max = powerbreak_char_4_list[4];
             if (char_2 == "H")
             {
@@ -204,6 +230,7 @@ namespace abb_retrofill_powerbreak.powerbreak
             label.Variables["SK600"].SetValue(sk600);
             label.Variables["ShortTime"].SetValue(short_time);
             label.Variables["NewDatecode"].SetValue("RT"+new_date_code.generate_new_date_code());
+            label.Variables["OldDatecode"].SetValue(txt_old_dc.Text);
             label.Variables["ULFilePath"].SetValue(ul_path);
             label.Variables["IssueNO"].SetValue(issue_number);
             ILabelPreviewSettings labelPreviewSettings = new LabelPreviewSettings();
@@ -236,17 +263,25 @@ namespace abb_retrofill_powerbreak.powerbreak
 
         private void txt_cat_number_Leave(object sender, EventArgs e)
         {
+            remove_spaces(txt_cat_number);
             update_powerbreak_label();
         }
 
         private void txt_serial_number_Leave(object sender, EventArgs e)
         {
+            remove_spaces(txt_serial_number);
             update_powerbreak_label();
         }
 
         private void txt_old_dc_Leave(object sender, EventArgs e)
         {
+            remove_spaces(txt_old_dc);
             update_powerbreak_label();
+        }
+
+        private void remove_spaces(TextBox txtbox)
+        {
+            txtbox.Text.Replace(" ", String.Empty);
         }
 
         private void ul_check_box_CheckedChanged(object sender, EventArgs e)
@@ -254,10 +289,12 @@ namespace abb_retrofill_powerbreak.powerbreak
             if (ul_check_box.Checked)
             {
                 ul_path = @"C:\Projects\abb-retrofill-powerbreak\images\CuL.jpg";
+                ul_bool = true;
             }
             else if(ul_check_box.Checked == false)
             {
                 ul_path = "";
+                ul_bool = false;
             }
             update_powerbreak_label();
         }
@@ -269,22 +306,65 @@ namespace abb_retrofill_powerbreak.powerbreak
 
         private void print_label()
         {
-            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(powerbreak_label.powerbreak_label);
-            label.PrintSettings.PrinterName = combo_printer.Text.Trim();
-            label.Variables["InterruptingCapacity"].SetValue(interrupting_capacity);
-            label.Variables["CatalogNo"].SetValue(txt_cat_number.Text);
-            label.Variables["SerialNO"].SetValue(txt_serial_number.Text);
-            label.Variables["ConfigNO"].SetValue(txt_config.Text);
-            label.Variables["RatingPlug"].SetValue(rating_plug);
-            label.Variables["AmpsMax"].SetValue(amps_max);
-            label.Variables["SK240"].SetValue(sk240);
-            label.Variables["SK480"].SetValue(sk480);
-            label.Variables["SK600"].SetValue(sk600);
-            label.Variables["ShortTime"].SetValue(short_time);
-            label.Variables["NewDatecode"].SetValue("RT" + new_date_code.generate_new_date_code());
-            label.Variables["ULFilePath"].SetValue(ul_path);
-            label.Variables["IssueNO"].SetValue(issue_number);
-            label.Print(1);
+            try
+            {
+                ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(powerbreak_label.powerbreak_label);
+                label.PrintSettings.PrinterName = combo_printer.Text.Trim();
+                label.Variables["InterruptingCapacity"].SetValue(interrupting_capacity);
+                label.Variables["CatalogNo"].SetValue(txt_cat_number.Text);
+                label.Variables["SerialNO"].SetValue(txt_serial_number.Text);
+                label.Variables["ConfigNO"].SetValue(txt_config.Text);
+                label.Variables["RatingPlug"].SetValue(rating_plug);
+                label.Variables["AmpsMax"].SetValue(amps_max);
+                label.Variables["SK240"].SetValue(sk240);
+                label.Variables["SK480"].SetValue(sk480);
+                label.Variables["SK600"].SetValue(sk600);
+                label.Variables["ShortTime"].SetValue(short_time);
+                label.Variables["NewDatecode"].SetValue("RT" + new_date_code.generate_new_date_code());
+                label.Variables["ULFilePath"].SetValue(ul_path);
+                label.Variables["IssueNO"].SetValue(issue_number);
+                label.Print(1);
+                powerbreak_bool = database_class_action.serial_number_check_powerbreak(txt_serial_number.Text);
+                if (powerbreak_bool == false)
+                {
+                    archive_data();
+                }
+                else
+                {
+                    ToolTip tip = new ToolTip();
+                    tip.IsBalloon = true;
+                    tip.Show("Serial Number:" + txt_serial_number.Text + " has been printed before. You May print this again but it will only archive this print once", txt_serial_number, 10000);
+                }
+            }
+            catch(Exception er)
+            {
+                MessageBox.Show(er.Message.ToString());
+            }
+        }
+
+        private void archive_data()
+        {
+            database_class_action.archive_powerbreak(txt_config.Text, txt_serial_number.Text, txt_cat_number.Text,rating_plug, sk240, sk480, sk600, short_time, ul_bool);
+        }
+        private void btn_menu_Click(object sender, EventArgs e)
+        {
+            var main = new menu.main_menu();
+            Hide();
+            main.Show();
+        }
+
+        private void btn_retro_Click(object sender, EventArgs e)
+        {
+            var retrofill = new retrofill.retrofill();
+            Hide();
+            retrofill.Show();
+        }
+
+        private void btn_interrupt_Click(object sender, EventArgs e)
+        {
+            var interrupt_add = new misc_forms.retrofill_interrupt_add();
+            Hide();
+            interrupt_add.Show();
         }
     }
 }

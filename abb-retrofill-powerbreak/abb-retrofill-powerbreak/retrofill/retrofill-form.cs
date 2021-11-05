@@ -6,12 +6,14 @@ using System.Windows.Forms;
 using System.Data.SQLite;
 using abb_retrofill_powerbreak.menu;
 using abb_retrofill_powerbreak.powerbreak;
+using abb_retrofill_powerbreak.misc_forms;
 using System.Collections.Generic;
 using NiceLabel.SDK;
 using abb_retrofill_powerbreak.labels;
 using System.IO;
 using System.Drawing;
 using System.Reflection;
+using System.Threading;
 
 namespace abb_retrofill_powerbreak.retrofill
 {
@@ -35,26 +37,42 @@ namespace abb_retrofill_powerbreak.retrofill
         public string side_label_type_2 { get; set; }
         public string side_label_cat_3 { get; set; }
         public string side_label_type_3 { get; set; }
+        public string ul_path { get; set; }
+        public bool ul_bool { get; set; }
         public bool isFuzed { get; set; }
         private retrofill_data_handler retro_data_handler { get; set; }
-        private database dbConnection { get; set; }
+        private database database_class_action { get; set; }
         private label_files label_paths { get; set; }
         private unfuzed_values unfuzed_label_values { get; set; }
         public List<string> unfuzedlist { get; set; }
+        private Thread form_initialization_thread;
         public retrofill()
         {
             InitializeComponent();
+            form_initialization_thread = new Thread(new ThreadStart(form_initialize_function));
+            form_initialization_thread.IsBackground = true;
+            form_initialization_thread.Start();
+        }
+
+        private void form_initialize_function()
+        {
+            CheckForIllegalCrossThreadCalls = false;
+            load_pic_box.Visible = true;
+            circularProgressBar2.Visible = true;
             InitializePrintEngine();
             retro_data_handler = new retrofill_data_handler();
-            dbConnection = new database();
+            database_class_action = new database();
             label_paths = new label_files();
+            find_printers(combo_printer, label_paths.powerbreak_label);
+            find_printers(combo_side, label_paths.retrofill_side_label);
+            find_printers(combo_caution, label_paths.retrofill_caution_label);
             preview_label(picbox_retro, label_paths.retrofill_label);
             preview_label(picbox_side, label_paths.retrofill_side_label);
             preview_label(picbox_caution, label_paths.retrofill_caution_label);
             txt_new_dc.Text = generate_new_date_code();
+            load_pic_box.Visible = false;
+            circularProgressBar2.Visible = false;
         }
-
-
         private void parse_catalog_number(string catalog_number)
         {
             first_six = catalog_number.Substring(0, 6);
@@ -65,8 +83,25 @@ namespace abb_retrofill_powerbreak.retrofill
             char_5 = catalog_number.Substring(4, 1);
             char_6 = catalog_number.Substring(5, 1);
             char_13 = catalog_number.Substring(12, 1);
+            ul_listed_function(char_2, char_5);
         }
 
+        private void ul_listed_function(string char_2, string char_5)
+        {
+            if(char_2 == "3" && char_5 == "K")
+            {
+                ul_path = @"C:\Projects\abb-retrofill-powerbreak\images\CuL.jpg";
+                ul_bool = true;
+            }
+            else
+            {
+                ul_path = "";
+                ul_bool = false;
+                ToolTip tip = new ToolTip();
+                tip.IsBalloon = true;
+                tip.Show("This Product is not UL Listed", txt_catalog_number, 10000);
+            }
+        }
         private bool fuzed_or_unfuzed(string char_3)
         {
             int i = 0;
@@ -81,24 +116,24 @@ namespace abb_retrofill_powerbreak.retrofill
             }
         }
 
-        private void find_printers()
+        private void find_printers(ComboBox printer_combo,string label_file)
         {
-            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_paths.retrofill_label);
+            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_file);
 
             foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
             {
-                combo_printer.Items.Add(printer.ToString());
+                printer_combo.Items.Add(printer.ToString());
             }
-            foreach (var item in combo_printer.Items)
+            foreach (var item in printer_combo.Items)
             {
                 if (item.ToString() == label.PrintSettings.PrinterName)
                 {
-                    combo_printer.SelectedItem = item.ToString();
+                    printer_combo.SelectedItem = item.ToString();
                     break;
                 }
                 else
                 {
-                    combo_printer.Text = "Select Printer Here";
+                    printer_combo.Text = "Select Printer Here";
                 }
             }
         }
@@ -183,6 +218,7 @@ namespace abb_retrofill_powerbreak.retrofill
             label.Variables["ValF"].SetValue("100");
             label.Variables["ValP"].SetValue(frame_size);
             label.Variables["ValT"].SetValue(frame_size);
+            label.Variables["ul_path"].SetValue(ul_path);
             ILabelPreviewSettings labelPreviewSettings = new LabelPreviewSettings();
             labelPreviewSettings.ImageFormat = "PNG";
             labelPreviewSettings.Width = this.picbox_retro.Width;
@@ -220,6 +256,7 @@ namespace abb_retrofill_powerbreak.retrofill
             label.Variables["ValH"].SetValue(unfuzed_label_values.valH);
             label.Variables["ValI"].SetValue(unfuzed_label_values.valI);
             label.Variables["ValJ"].SetValue(unfuzed_label_values.valJ);
+            label.Variables["ul_path"].SetValue(ul_path);
             ILabelPreviewSettings labelPreviewSettings = new LabelPreviewSettings();
             labelPreviewSettings.ImageFormat = "PNG";
             labelPreviewSettings.Width = this.picbox_retro.Width;
@@ -339,7 +376,7 @@ namespace abb_retrofill_powerbreak.retrofill
                     sensor_size = frame_size;
                     interrupt_value_1 = "600";
                     interrupt_value_2 = "100";
-                    List<string> char_list = dbConnection.find_side_label_values(char_13);
+                    List<string> char_list = database_class_action.find_side_label_values(char_13);
                     for (int i = 0; i < char_list.Count; i++)
                     {
                         side_label_cat_1 = char_list[1].ToString();
@@ -379,12 +416,12 @@ namespace abb_retrofill_powerbreak.retrofill
                      * INSERT FUNCTION TO FIND ALL THIS DATA
                      */
                     unfuzed_label_values = new unfuzed_values();
-                    unfuzedlist = dbConnection.find_unfuzed_values(first_six);
+                    unfuzedlist = database_class_action.find_unfuzed_values(first_six);
                     if (unfuzedlist.Count > 0)
                     {
                         frame_size = retro_data_handler.find_fuzed_frame_sensor(char_5);
                         sensor_size = frame_size;
-                        List<string> char_list = dbConnection.find_side_label_values(char_13);
+                        List<string> char_list = database_class_action.find_side_label_values(char_13);
                         for (int i = 0; i < char_list.Count; i++)
                         {
                             side_label_cat_1 = char_list[1].ToString();
@@ -517,18 +554,98 @@ namespace abb_retrofill_powerbreak.retrofill
         {
             if (check_retro.Checked)
             {
-                MessageBox.Show("Print Main Retro");
+                if(isFuzed == true)
+                {
+                    print_fuzed_retrofill();
+                    database_class_action.archive_retrofill(txt_catalog_number.Text, ul_bool, txt_sn.Text);
+                }
+                else if(isFuzed == false)
+                {
+                    print_unfuzed_retrofill();
+                    database_class_action.archive_retrofill(txt_catalog_number.Text, ul_bool, txt_sn.Text);
+                }
             }
 
             if (check_side.Checked)
             {
-                MessageBox.Show("Print Side");
+                print_side_label();
             }
 
             if (check_caution.Checked)
             {
-                MessageBox.Show("Print Caution");
+                print_caution_label();
             }
+        }
+
+        private void print_fuzed_retrofill()
+        {
+            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_paths.retrofill_label);
+            label.PrintSettings.PrinterName = combo_printer.Text.Trim();
+            label.Variables["CatNum"].SetValue(txt_catalog_number.Text);
+            label.Variables["SerialNum"].SetValue(txt_sn.Text);
+            label.Variables["ValQ"].SetValue(txt_ren_parts_bull.Text);
+            label.Variables["ValK"].SetValue(txt_inst_book.Text);
+            label.Variables["ValR"].SetValue(txt_outline_dwg.Text);
+            label.Variables["MfgDC"].SetValue(txt_mfg_dc.Text);
+            label.Variables["ValL"].SetValue(txt_new_dc.Text);
+            label.Variables["ValA"].SetValue("3");
+            label.Variables["ValC"].SetValue("600");
+            label.Variables["ValF"].SetValue("100");
+            label.Variables["ValP"].SetValue(frame_size);
+            label.Variables["ValT"].SetValue(frame_size);
+            label.Print(1);
+        }
+
+        private void print_unfuzed_retrofill()
+        {
+            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_paths.retrofil_unfuzed_label);
+            label.PrintSettings.PrinterName = combo_printer.Text.Trim();
+            label.Variables["CatNum"].SetValue(txt_catalog_number.Text);
+            label.Variables["SerialNum"].SetValue(txt_sn.Text);
+            label.Variables["ValB"].SetValue(unfuzed_label_values.valB);
+            label.Variables["ValC"].SetValue(unfuzed_label_values.valC);
+            label.Variables["ValD"].SetValue(unfuzed_label_values.valD);
+            label.Variables["ValE"].SetValue(unfuzed_label_values.valE);
+            label.Variables["ValF"].SetValue(unfuzed_label_values.valF);
+            label.Variables["ValG"].SetValue(unfuzed_label_values.valG);
+            label.Variables["ValH"].SetValue(unfuzed_label_values.valH);
+            label.Variables["ValI"].SetValue(unfuzed_label_values.valI);
+            label.Variables["ValJ"].SetValue(unfuzed_label_values.valJ);
+            label.Print(1);
+        }
+        private void print_side_label()
+        {
+            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_paths.retrofill_side_label);
+            label.PrintSettings.PrinterName = combo_side.Text.Trim();
+            label.Variables["A9"].SetValue(side_label_cat_1);
+            label.Variables["A43"].SetValue(side_label_type_1);
+            label.Variables["A10"].SetValue(side_label_cat_2);
+            label.Variables["A44"].SetValue(side_label_type_2);
+            label.Variables["A11"].SetValue(side_label_cat_3);
+            label.Variables["A45"].SetValue(side_label_type_3);
+            label.Variables["A35"].SetValue(txt_breaker_type.Text);
+            label.Variables["A36"].SetValue(frame_size);
+            label.Variables["A37"].SetValue("3");
+            label.Variables["A38"].SetValue(txt_interrupt_at_508.Text);
+            label.Variables["W"].SetValue(first_six);
+            label.Variables["P"].SetValue(char_13);
+            label.Print(1);
+        }
+
+        private void print_caution_label()
+        {
+            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_paths.retrofill_caution_label);
+            label.PrintSettings.PrinterName = combo_caution.Text.Trim();
+            label.Variables["Caution_Line1"].SetValue(txt_caution_1.Text);
+            label.Variables["Caution_Line2"].SetValue(txt_caution_2.Text);
+            label.Print(1);
+        }
+
+        private void btn_interrupt_Click(object sender, EventArgs e)
+        {
+            var interrupt_add = new misc_forms.retrofill_interrupt_add();
+            Hide();
+            interrupt_add.Show();
         }
     }
 }

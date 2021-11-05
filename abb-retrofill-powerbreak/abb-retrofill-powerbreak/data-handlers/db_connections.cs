@@ -1,6 +1,8 @@
 ﻿using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System;
+
 namespace abb_retrofill_powerbreak.data_handlers
 {
     class database
@@ -129,6 +131,131 @@ namespace abb_retrofill_powerbreak.data_handlers
                 }
             }
             return char_9_ratings_val;
+        }
+
+        public void archive_powerbreak(string config, string serial_no,string cat,string rp,string sk240, string sk480, string sk600, string st, bool ul)
+        {
+            using (var connection = new SQLiteConnection(sql_lite_connection))
+            {
+                using (var cmd = new SQLiteCommand("INSERT INTO powerbreak_ul_history (catalog_no,serial_no,config_no,rating_plug,sk_hk_240,sk_hk_480,sk_hk_600,short_time,ul,print_date) VALUES(@cat,@serial_no,@cf,@rp,@sk240,@sk480,@sk600,@st,@ul,@pd)", connection))
+                {
+                    connection.Open();
+                    cmd.Parameters.AddWithValue("@cat", cat);
+                    cmd.Parameters.AddWithValue("@serial_no", serial_no);
+                    cmd.Parameters.AddWithValue("@cf", config);
+                    cmd.Parameters.AddWithValue("@rp", rp); 
+                    cmd.Parameters.AddWithValue("@sk240", sk240);
+                    cmd.Parameters.AddWithValue("@sk480", sk480);
+                    cmd.Parameters.AddWithValue("@sk600", sk600);
+                    cmd.Parameters.AddWithValue("@st", st);
+                    cmd.Parameters.AddWithValue("@ul", Convert.ToString(ul));
+                    cmd.Parameters.AddWithValue("@pd", DateTime.Now.ToShortDateString());
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch(SQLiteException er)
+                    {
+                        MessageBox.Show(er.Message.ToString());
+                    }
+                }
+            }
+        }
+
+        public void archive_retrofill(string cat,bool ul_value,string serial_number)
+        {
+            using (var connection = new SQLiteConnection(sql_lite_connection))
+            {
+                using (var cmd = new SQLiteCommand("INSERT INTO retrofill_ul_history (cat_number,date_time_stamp,ul,serial_number) VALUES(@cat,@datetime,@ul,@sn)", connection))
+                {
+                    connection.Open();
+                    cmd.Parameters.AddWithValue("@cat", cat);
+                    cmd.Parameters.AddWithValue("@datetime", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@ul", Convert.ToString(ul_value));
+                    cmd.Parameters.AddWithValue("@sn", serial_number);
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (SQLiteException er)
+                    {
+                        MessageBox.Show(er.Message.ToString());
+                    }
+                }
+            }
+        }
+
+        public void add_interrupt_values(string six,string b,string c,string d, string e,string f, string g,string h,string i, string j)
+        {
+            using (var connection = new SQLiteConnection(sql_lite_connection))
+            {
+                using (var cmd = new SQLiteCommand("INSERT INTO interrupt_values_db (six_digit_value,b,c,d,e,f,g,h,i,j) VALUES(@six,@b,@c,@d,@e,@f,@g,@h,@i,@j)", connection))
+                {
+                    connection.Open();
+                    cmd.Parameters.AddWithValue("@six", six);
+                    cmd.Parameters.AddWithValue("@b", b);
+                    cmd.Parameters.AddWithValue("@c", c);
+                    cmd.Parameters.AddWithValue("@d", d);
+                    cmd.Parameters.AddWithValue("@e", e);
+                    cmd.Parameters.AddWithValue("@f", f);
+                    cmd.Parameters.AddWithValue("@g", g);
+                    cmd.Parameters.AddWithValue("@h", h);
+                    cmd.Parameters.AddWithValue("@i", i);
+                    cmd.Parameters.AddWithValue("@j", j);
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (SQLiteException er)
+                    {
+                        MessageBox.Show(er.Message.ToString());
+                    }
+                }
+            }
+        }
+
+        public bool add_interrupt_check(string six)
+        {
+            bool found_sn = false;
+            using (var connection = new SQLiteConnection(sql_lite_connection))
+            {
+                using (var cmd = new SQLiteCommand("SELECT six_digit_value FROM interrupt_values_db WHERE six_digit_value LIKE @six", connection))
+                {
+                    connection.Open();
+                    cmd.Parameters.AddWithValue("@six", six);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            found_sn = true;
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            return found_sn;
+        }
+
+        public bool serial_number_check_powerbreak(string sn)
+        {
+            bool found_sn = false;
+            using (var connection = new SQLiteConnection(sql_lite_connection))
+            {
+                using (var cmd = new SQLiteCommand("SELECT * FROM powerbreak_ul_history WHERE serial_no LIKE @sn", connection))
+                {
+                    connection.Open();
+                    cmd.Parameters.AddWithValue("@sn", sn);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if(reader.HasRows)
+                        { 
+                            found_sn = true;
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            return found_sn;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using abb_retrofill_powerbreak.powerbreak;
 using abb_retrofill_powerbreak.retrofill;
+using abb_retrofill_powerbreak.misc_forms;
 using System.Windows.Forms;
 
 namespace abb_retrofill_powerbreak.menu
@@ -48,6 +49,13 @@ namespace abb_retrofill_powerbreak.menu
         private void btn_close_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void btn_interrupt_Click(object sender, EventArgs e)
+        {
+            var add_interrupts = new misc_forms.retrofill_interrupt_add();
+            Hide();
+            add_interrupts.Show();
         }
     }
 }
