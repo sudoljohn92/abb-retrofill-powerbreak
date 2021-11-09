@@ -16,7 +16,7 @@ namespace abb_retrofill_powerbreak
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new load_form());
+            Application.Run(new main_menu());
         }
     }
 }

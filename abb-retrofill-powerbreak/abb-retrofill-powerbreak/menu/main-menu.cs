@@ -57,5 +57,12 @@ namespace abb_retrofill_powerbreak.menu
             Hide();
             add_interrupts.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var reprints = new retrofill_reprint();
+            Hide();
+            reprints.Show();
+        }
     }
 }

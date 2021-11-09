@@ -31,7 +31,6 @@ C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powe
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\SDK.NET.Interface.dll
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\SDK.NET.Interface.xml
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.powerbreak.powerbreak_main.resources
-C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.csproj.AssemblyReference.cache
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\CircularProgressBar.dll
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\WinFormAnimation.dll
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\CircularProgressBar.xml
@@ -40,3 +39,11 @@ C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powe
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\abb-retrofill-powerbreak.application
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.exe.manifest
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.application
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\x64\SQLite.Interop.dll
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\bin\Debug\x86\SQLite.Interop.dll
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.retrofill_reprint.resources
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.retrofill_un_fuzed_re_print.resources
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb-retrofill-powerbreak.csproj.AssemblyReference.cache
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.retrofill_side_reprint.resources
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.new_retro_side_label_reprint.resources
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.powerbreak_reprint.resources

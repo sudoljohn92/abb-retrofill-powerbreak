@@ -76,6 +76,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_reprints = new System.Windows.Forms.Button();
             this.btn_reports = new System.Windows.Forms.Button();
             this.btn_interrupt = new System.Windows.Forms.Button();
             this.btn_pwbreak = new System.Windows.Forms.Button();
@@ -585,6 +586,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel2.Controls.Add(this.btn_reprints);
             this.panel2.Controls.Add(this.btn_reports);
             this.panel2.Controls.Add(this.btn_interrupt);
             this.panel2.Controls.Add(this.btn_pwbreak);
@@ -594,6 +596,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(129, 872);
             this.panel2.TabIndex = 50;
+            // 
+            // btn_reprints
+            // 
+            this.btn_reprints.BackColor = System.Drawing.Color.Transparent;
+            this.btn_reprints.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_reprints.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reprints.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_reprints.Location = new System.Drawing.Point(6, 180);
+            this.btn_reprints.Name = "btn_reprints";
+            this.btn_reprints.Size = new System.Drawing.Size(114, 37);
+            this.btn_reprints.TabIndex = 23;
+            this.btn_reprints.Text = "RePrints";
+            this.btn_reprints.UseVisualStyleBackColor = false;
             // 
             // btn_reports
             // 
@@ -926,5 +941,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.PictureBox load_pic_box;
         private CircularProgressBar.CircularProgressBar circularProgressBar2;
+        private System.Windows.Forms.Button btn_reprints;
     }
 }

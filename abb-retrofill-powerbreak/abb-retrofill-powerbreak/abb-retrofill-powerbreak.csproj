@@ -26,7 +26,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -85,14 +85,14 @@
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.SQLite, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    <Reference Include="System.Data.SQLite, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\lib\net46\System.Data.SQLite.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.115.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.115.5\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.115.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.115.5\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
@@ -146,11 +146,23 @@
     <Compile Include="misc-forms\retrofill_interrupt_add.Designer.cs">
       <DependentUpon>retrofill_interrupt_add.cs</DependentUpon>
     </Compile>
+    <Compile Include="new_retro_side_label_reprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_retro_side_label_reprint.Designer.cs">
+      <DependentUpon>new_retro_side_label_reprint.cs</DependentUpon>
+    </Compile>
     <Compile Include="powerbreak\powerbreak_main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="powerbreak\powerbreak_main.Designer.cs">
       <DependentUpon>powerbreak_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="powerbreak_reprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="powerbreak_reprint.Designer.cs">
+      <DependentUpon>powerbreak_reprint.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,6 +171,24 @@
     </Compile>
     <Compile Include="retrofill\retrofill-form.Designer.cs">
       <DependentUpon>retrofill-form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="retrofill_reprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="retrofill_reprint.Designer.cs">
+      <DependentUpon>retrofill_reprint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="retrofill_side_reprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="retrofill_side_reprint.Designer.cs">
+      <DependentUpon>retrofill_side_reprint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="retrofill_un_fuzed_re_print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="retrofill_un_fuzed_re_print.Designer.cs">
+      <DependentUpon>retrofill_un_fuzed_re_print.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="load_form\load_form.resx">
       <DependentUpon>load_form.cs</DependentUpon>
@@ -172,8 +202,14 @@
     <EmbeddedResource Include="misc-forms\retrofill_interrupt_add.resx">
       <DependentUpon>retrofill_interrupt_add.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="new_retro_side_label_reprint.resx">
+      <DependentUpon>new_retro_side_label_reprint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="powerbreak\powerbreak_main.resx">
       <DependentUpon>powerbreak_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="powerbreak_reprint.resx">
+      <DependentUpon>powerbreak_reprint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -187,6 +223,15 @@
     </Compile>
     <EmbeddedResource Include="retrofill\retrofill-form.resx">
       <DependentUpon>retrofill-form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="retrofill_reprint.resx">
+      <DependentUpon>retrofill_reprint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="retrofill_side_reprint.resx">
+      <DependentUpon>retrofill_side_reprint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="retrofill_un_fuzed_re_print.resx">
+      <DependentUpon>retrofill_un_fuzed_re_print.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="abb-retrofill-powerbreak_TemporaryKey.pfx" />
     <None Include="App.config" />
@@ -206,6 +251,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="system_files\ul_issue_num.txt" />
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background.PNG" />
@@ -225,6 +276,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -232,8 +284,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
-    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
   </Target>
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
-  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
 </Project>

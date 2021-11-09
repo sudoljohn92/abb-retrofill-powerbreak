@@ -56,22 +56,29 @@ namespace abb_retrofill_powerbreak.retrofill
 
         private void form_initialize_function()
         {
-            CheckForIllegalCrossThreadCalls = false;
-            load_pic_box.Visible = true;
-            circularProgressBar2.Visible = true;
-            InitializePrintEngine();
-            retro_data_handler = new retrofill_data_handler();
-            database_class_action = new database();
-            label_paths = new label_files();
-            find_printers(combo_printer, label_paths.powerbreak_label);
-            find_printers(combo_side, label_paths.retrofill_side_label);
-            find_printers(combo_caution, label_paths.retrofill_caution_label);
-            preview_label(picbox_retro, label_paths.retrofill_label);
-            preview_label(picbox_side, label_paths.retrofill_side_label);
-            preview_label(picbox_caution, label_paths.retrofill_caution_label);
-            txt_new_dc.Text = generate_new_date_code();
-            load_pic_box.Visible = false;
-            circularProgressBar2.Visible = false;
+            try
+            {
+                CheckForIllegalCrossThreadCalls = false;
+                load_pic_box.Visible = true;
+                circularProgressBar2.Visible = true;
+                InitializePrintEngine();
+                retro_data_handler = new retrofill_data_handler();
+                database_class_action = new database();
+                label_paths = new label_files();
+                find_printers(combo_printer, label_paths.powerbreak_label);
+                find_printers(combo_side, label_paths.retrofill_side_label);
+                find_printers(combo_caution, label_paths.retrofill_caution_label);
+                preview_label(picbox_retro, label_paths.retrofill_label);
+                preview_label(picbox_side, label_paths.retrofill_side_label);
+                preview_label(picbox_caution, label_paths.retrofill_caution_label);
+                txt_new_dc.Text = generate_new_date_code();
+                load_pic_box.Visible = false;
+                circularProgressBar2.Visible = false;
+            }
+            catch(Exception er)
+            {
+                MessageBox.Show(er.Message.ToString());
+            }
         }
         private void parse_catalog_number(string catalog_number)
         {
@@ -256,6 +263,8 @@ namespace abb_retrofill_powerbreak.retrofill
             label.Variables["ValH"].SetValue(unfuzed_label_values.valH);
             label.Variables["ValI"].SetValue(unfuzed_label_values.valI);
             label.Variables["ValJ"].SetValue(unfuzed_label_values.valJ);
+            label.Variables["ValP"].SetValue(frame_size);
+            label.Variables["ValT"].SetValue(frame_size);
             label.Variables["ul_path"].SetValue(ul_path);
             ILabelPreviewSettings labelPreviewSettings = new LabelPreviewSettings();
             labelPreviewSettings.ImageFormat = "PNG";

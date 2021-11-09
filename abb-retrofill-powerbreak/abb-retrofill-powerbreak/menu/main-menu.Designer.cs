@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_menu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btn_close = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btn_reports = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_interrupt = new System.Windows.Forms.Button();
@@ -41,6 +41,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,20 +69,6 @@
             this.panel2.Size = new System.Drawing.Size(733, 59);
             this.panel2.TabIndex = 1;
             // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.btn_reports);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.btn_interrupt);
-            this.panel3.Controls.Add(this.btn_pwbreak);
-            this.panel3.Controls.Add(this.btn_retro);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 58);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(141, 333);
-            this.panel3.TabIndex = 2;
-            // 
             // btn_close
             // 
             this.btn_close.BackColor = System.Drawing.Color.Transparent;
@@ -95,6 +82,21 @@
             this.btn_close.Text = "Close";
             this.btn_close.UseVisualStyleBackColor = false;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btn_reports);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.btn_interrupt);
+            this.panel3.Controls.Add(this.btn_pwbreak);
+            this.panel3.Controls.Add(this.btn_retro);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 58);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(141, 333);
+            this.panel3.TabIndex = 2;
             // 
             // btn_reports
             // 
@@ -194,6 +196,20 @@
             this.label3.Text = "To Navigate through the Dashboard\r\nRefer to these Navigation Buttons \r\nOn the Lef" +
     "t";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(11, 214);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 37);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "RePrints";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // main_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,5 +257,6 @@
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }
