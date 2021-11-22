@@ -277,7 +277,7 @@ namespace abb_retrofill_powerbreak
             this.txt_catalog_number.Name = "txt_catalog_number";
             this.txt_catalog_number.Size = new System.Drawing.Size(253, 25);
             this.txt_catalog_number.TabIndex = 174;
-            this.txt_catalog_number.Text = " ";
+            this.txt_catalog_number.Text = "CAT NUMBER";
             this.txt_catalog_number.Leave += new System.EventHandler(this.txt_catalog_number_Leave);
             // 
             // label12
@@ -298,7 +298,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_e.Name = "txt_val_e";
             this.txt_val_e.Size = new System.Drawing.Size(61, 25);
             this.txt_val_e.TabIndex = 172;
-            this.txt_val_e.Text = " ";
+            this.txt_val_e.Text = "VAL E";
             this.txt_val_e.Leave += new System.EventHandler(this.txt_val_e_Leave);
             // 
             // txt_val_d
@@ -308,7 +308,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_d.Name = "txt_val_d";
             this.txt_val_d.Size = new System.Drawing.Size(61, 25);
             this.txt_val_d.TabIndex = 171;
-            this.txt_val_d.Text = " ";
+            this.txt_val_d.Text = "VAL D";
             this.txt_val_d.Leave += new System.EventHandler(this.txt_val_d_Leave);
             // 
             // label8
@@ -329,7 +329,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_c.Name = "txt_val_c";
             this.txt_val_c.Size = new System.Drawing.Size(60, 25);
             this.txt_val_c.TabIndex = 169;
-            this.txt_val_c.Text = " ";
+            this.txt_val_c.Text = "VAL C";
             this.txt_val_c.Leave += new System.EventHandler(this.txt_val_c_Leave);
             // 
             // label2
@@ -350,7 +350,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_b.Name = "txt_val_b";
             this.txt_val_b.Size = new System.Drawing.Size(60, 25);
             this.txt_val_b.TabIndex = 167;
-            this.txt_val_b.Text = " ";
+            this.txt_val_b.Text = "VAL B";
             this.txt_val_b.Leave += new System.EventHandler(this.txt_val_b_Leave);
             // 
             // btn_print
@@ -422,7 +422,7 @@ namespace abb_retrofill_powerbreak
             this.txt_new_dc.Name = "txt_new_dc";
             this.txt_new_dc.Size = new System.Drawing.Size(151, 25);
             this.txt_new_dc.TabIndex = 160;
-            this.txt_new_dc.Text = " ";
+            this.txt_new_dc.Text = "NEW DC";
             this.txt_new_dc.Leave += new System.EventHandler(this.txt_new_dc_Leave);
             // 
             // label9
@@ -431,9 +431,9 @@ namespace abb_retrofill_powerbreak
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(160, 336);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 17);
+            this.label9.Size = new System.Drawing.Size(127, 17);
             this.label9.TabIndex = 159;
-            this.label9.Text = "Mfg Date Code:";
+            this.label9.Text = "Old Mfg Date Code:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txt_mfg_dc
@@ -443,7 +443,7 @@ namespace abb_retrofill_powerbreak
             this.txt_mfg_dc.Name = "txt_mfg_dc";
             this.txt_mfg_dc.Size = new System.Drawing.Size(151, 25);
             this.txt_mfg_dc.TabIndex = 158;
-            this.txt_mfg_dc.Text = " ";
+            this.txt_mfg_dc.Text = "OLD MFG DC";
             this.txt_mfg_dc.Leave += new System.EventHandler(this.txt_mfg_dc_Leave);
             // 
             // label7
@@ -464,7 +464,7 @@ namespace abb_retrofill_powerbreak
             this.txt_outline_dwg.Name = "txt_outline_dwg";
             this.txt_outline_dwg.Size = new System.Drawing.Size(254, 25);
             this.txt_outline_dwg.TabIndex = 156;
-            this.txt_outline_dwg.Text = " ";
+            this.txt_outline_dwg.Text = "OUTLINE DWG";
             this.txt_outline_dwg.Leave += new System.EventHandler(this.txt_outline_dwg_Leave);
             // 
             // label6
@@ -485,7 +485,7 @@ namespace abb_retrofill_powerbreak
             this.txt_inst_book.Name = "txt_inst_book";
             this.txt_inst_book.Size = new System.Drawing.Size(254, 25);
             this.txt_inst_book.TabIndex = 154;
-            this.txt_inst_book.Text = " ";
+            this.txt_inst_book.Text = "INST BOOK";
             this.txt_inst_book.Leave += new System.EventHandler(this.txt_inst_book_Leave);
             // 
             // label5
@@ -506,7 +506,7 @@ namespace abb_retrofill_powerbreak
             this.txt_ren_parts_bull.Name = "txt_ren_parts_bull";
             this.txt_ren_parts_bull.Size = new System.Drawing.Size(254, 25);
             this.txt_ren_parts_bull.TabIndex = 152;
-            this.txt_ren_parts_bull.Text = " ";
+            this.txt_ren_parts_bull.Text = "REN PARTS";
             this.txt_ren_parts_bull.Leave += new System.EventHandler(this.txt_ren_parts_bull_Leave);
             // 
             // label4
@@ -527,7 +527,7 @@ namespace abb_retrofill_powerbreak
             this.txt_sn.Name = "txt_sn";
             this.txt_sn.Size = new System.Drawing.Size(253, 25);
             this.txt_sn.TabIndex = 150;
-            this.txt_sn.Text = " ";
+            this.txt_sn.Text = "SERIAL NUMBER";
             this.txt_sn.Leave += new System.EventHandler(this.txt_sn_Leave);
             // 
             // label3
@@ -632,7 +632,7 @@ namespace abb_retrofill_powerbreak
             // 
             this.load_pic_box.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
             this.load_pic_box.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.load_pic_box.Location = new System.Drawing.Point(523, 321);
+            this.load_pic_box.Location = new System.Drawing.Point(760, 257);
             this.load_pic_box.Name = "load_pic_box";
             this.load_pic_box.Size = new System.Drawing.Size(167, 136);
             this.load_pic_box.TabIndex = 180;
@@ -649,7 +649,7 @@ namespace abb_retrofill_powerbreak
             this.circularProgressBar2.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.circularProgressBar2.InnerMargin = 2;
             this.circularProgressBar2.InnerWidth = -1;
-            this.circularProgressBar2.Location = new System.Drawing.Point(462, 270);
+            this.circularProgressBar2.Location = new System.Drawing.Point(699, 206);
             this.circularProgressBar2.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar2.Name = "circularProgressBar2";
             this.circularProgressBar2.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
@@ -701,7 +701,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_f.Name = "txt_val_f";
             this.txt_val_f.Size = new System.Drawing.Size(60, 25);
             this.txt_val_f.TabIndex = 183;
-            this.txt_val_f.Text = " ";
+            this.txt_val_f.Text = "VAL H";
             this.txt_val_f.Leave += new System.EventHandler(this.txt_val_f_Leave);
             // 
             // label15
@@ -722,7 +722,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_g.Name = "txt_val_g";
             this.txt_val_g.Size = new System.Drawing.Size(60, 25);
             this.txt_val_g.TabIndex = 185;
-            this.txt_val_g.Text = " ";
+            this.txt_val_g.Text = "VAL G";
             this.txt_val_g.Leave += new System.EventHandler(this.txt_val_g_Leave);
             // 
             // label16
@@ -743,7 +743,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_h.Name = "txt_val_h";
             this.txt_val_h.Size = new System.Drawing.Size(60, 25);
             this.txt_val_h.TabIndex = 187;
-            this.txt_val_h.Text = " ";
+            this.txt_val_h.Text = "VAL F";
             this.txt_val_h.Leave += new System.EventHandler(this.txt_val_h_Leave);
             // 
             // label17
@@ -764,7 +764,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_i.Name = "txt_val_i";
             this.txt_val_i.Size = new System.Drawing.Size(60, 25);
             this.txt_val_i.TabIndex = 189;
-            this.txt_val_i.Text = " ";
+            this.txt_val_i.Text = "VAL I";
             this.txt_val_i.Leave += new System.EventHandler(this.txt_val_i_Leave);
             // 
             // label18
@@ -785,7 +785,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_j.Name = "txt_val_j";
             this.txt_val_j.Size = new System.Drawing.Size(60, 25);
             this.txt_val_j.TabIndex = 191;
-            this.txt_val_j.Text = " ";
+            this.txt_val_j.Text = "VAL J";
             this.txt_val_j.Leave += new System.EventHandler(this.txt_val_j_Leave);
             // 
             // label22
@@ -806,7 +806,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_t.Name = "txt_val_t";
             this.txt_val_t.Size = new System.Drawing.Size(151, 25);
             this.txt_val_t.TabIndex = 195;
-            this.txt_val_t.Text = " ";
+            this.txt_val_t.Text = " VAL T";
             this.txt_val_t.Leave += new System.EventHandler(this.txt_val_t_Leave);
             // 
             // label23
@@ -827,7 +827,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_p.Name = "txt_val_p";
             this.txt_val_p.Size = new System.Drawing.Size(151, 25);
             this.txt_val_p.TabIndex = 193;
-            this.txt_val_p.Text = " ";
+            this.txt_val_p.Text = "VAL P";
             this.txt_val_p.Leave += new System.EventHandler(this.txt_val_p_Leave);
             // 
             // retrofill_un_fuzed_re_print

@@ -100,7 +100,7 @@ namespace abb_retrofill_powerbreak
             this.label19.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label19.Location = new System.Drawing.Point(525, 21);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(143, 40);
+            this.label19.Size = new System.Drawing.Size(161, 40);
             this.label19.TabIndex = 51;
             this.label19.Text = "FreeForms";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -334,7 +334,7 @@ namespace abb_retrofill_powerbreak
             this.txt_new_dc.Name = "txt_new_dc";
             this.txt_new_dc.Size = new System.Drawing.Size(151, 25);
             this.txt_new_dc.TabIndex = 110;
-            this.txt_new_dc.Text = " ";
+            this.txt_new_dc.Text = "OLD DC";
             this.txt_new_dc.Leave += new System.EventHandler(this.txt_new_dc_Leave);
             // 
             // label9
@@ -355,7 +355,7 @@ namespace abb_retrofill_powerbreak
             this.txt_mfg_dc.Name = "txt_mfg_dc";
             this.txt_mfg_dc.Size = new System.Drawing.Size(151, 25);
             this.txt_mfg_dc.TabIndex = 108;
-            this.txt_mfg_dc.Text = " ";
+            this.txt_mfg_dc.Text = "MFG DC";
             this.txt_mfg_dc.Leave += new System.EventHandler(this.txt_mfg_dc_Leave);
             // 
             // label7
@@ -376,7 +376,7 @@ namespace abb_retrofill_powerbreak
             this.txt_outline_dwg.Name = "txt_outline_dwg";
             this.txt_outline_dwg.Size = new System.Drawing.Size(254, 25);
             this.txt_outline_dwg.TabIndex = 106;
-            this.txt_outline_dwg.Text = " ";
+            this.txt_outline_dwg.Text = "OUTLINE DWG";
             this.txt_outline_dwg.Leave += new System.EventHandler(this.txt_outline_dwg_Leave);
             // 
             // label6
@@ -397,7 +397,7 @@ namespace abb_retrofill_powerbreak
             this.txt_inst_book.Name = "txt_inst_book";
             this.txt_inst_book.Size = new System.Drawing.Size(254, 25);
             this.txt_inst_book.TabIndex = 104;
-            this.txt_inst_book.Text = " ";
+            this.txt_inst_book.Text = "INST BOOK";
             this.txt_inst_book.Leave += new System.EventHandler(this.txt_inst_book_Leave);
             // 
             // label5
@@ -418,7 +418,7 @@ namespace abb_retrofill_powerbreak
             this.txt_ren_parts_bull.Name = "txt_ren_parts_bull";
             this.txt_ren_parts_bull.Size = new System.Drawing.Size(254, 25);
             this.txt_ren_parts_bull.TabIndex = 102;
-            this.txt_ren_parts_bull.Text = " ";
+            this.txt_ren_parts_bull.Text = "REN PARTS";
             this.txt_ren_parts_bull.Leave += new System.EventHandler(this.txt_ren_parts_bull_Leave);
             // 
             // label4
@@ -439,7 +439,7 @@ namespace abb_retrofill_powerbreak
             this.txt_sn.Name = "txt_sn";
             this.txt_sn.Size = new System.Drawing.Size(253, 25);
             this.txt_sn.TabIndex = 100;
-            this.txt_sn.Text = " ";
+            this.txt_sn.Text = "SERIAL NUMBER";
             this.txt_sn.Leave += new System.EventHandler(this.txt_sn_Leave);
             // 
             // label3
@@ -531,7 +531,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_c.Name = "txt_val_c";
             this.txt_val_c.Size = new System.Drawing.Size(151, 25);
             this.txt_val_c.TabIndex = 131;
-            this.txt_val_c.Text = " ";
+            this.txt_val_c.Text = "FRAME SENSOR";
             this.txt_val_c.Leave += new System.EventHandler(this.txt_val_c_Leave);
             // 
             // label8
@@ -552,7 +552,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_t.Name = "txt_val_t";
             this.txt_val_t.Size = new System.Drawing.Size(151, 25);
             this.txt_val_t.TabIndex = 133;
-            this.txt_val_t.Text = " ";
+            this.txt_val_t.Text = "FRAME SENSOR";
             this.txt_val_t.Leave += new System.EventHandler(this.txt_val_t_Leave);
             // 
             // label11
@@ -573,7 +573,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_a.Name = "txt_val_a";
             this.txt_val_a.Size = new System.Drawing.Size(151, 25);
             this.txt_val_a.TabIndex = 135;
-            this.txt_val_a.Text = " ";
+            this.txt_val_a.Text = "MAX VOLT";
             this.txt_val_a.Leave += new System.EventHandler(this.txt_val_a_Leave);
             // 
             // label12
@@ -594,7 +594,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_f.Name = "txt_val_f";
             this.txt_val_f.Size = new System.Drawing.Size(151, 25);
             this.txt_val_f.TabIndex = 137;
-            this.txt_val_f.Text = " ";
+            this.txt_val_f.Text = "INTERRUPT";
             this.txt_val_f.Leave += new System.EventHandler(this.txt_val_f_Leave);
             // 
             // label1
@@ -615,7 +615,7 @@ namespace abb_retrofill_powerbreak
             this.txt_catalog_number.Name = "txt_catalog_number";
             this.txt_catalog_number.Size = new System.Drawing.Size(253, 25);
             this.txt_catalog_number.TabIndex = 139;
-            this.txt_catalog_number.Text = " ";
+            this.txt_catalog_number.Text = "CAT NUMBER";
             this.txt_catalog_number.Leave += new System.EventHandler(this.txt_catalog_number_Leave);
             // 
             // button4
