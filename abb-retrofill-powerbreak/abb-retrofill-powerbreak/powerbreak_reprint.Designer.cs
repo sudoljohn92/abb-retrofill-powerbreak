@@ -399,7 +399,7 @@ namespace abb_retrofill_powerbreak
             this.txt_issue_no.Name = "txt_issue_no";
             this.txt_issue_no.Size = new System.Drawing.Size(150, 25);
             this.txt_issue_no.TabIndex = 173;
-            this.txt_issue_no.Text = "ISSUE NUMBER";
+            this.txt_issue_no.Text = "ISSUE";
             this.txt_issue_no.Leave += new System.EventHandler(this.txt_issue_no_Leave);
             // 
             // label2
@@ -420,7 +420,7 @@ namespace abb_retrofill_powerbreak
             this.txt_sk600.Name = "txt_sk600";
             this.txt_sk600.Size = new System.Drawing.Size(150, 25);
             this.txt_sk600.TabIndex = 171;
-            this.txt_sk600.Text = "SK600";
+            this.txt_sk600.Text = "600";
             this.txt_sk600.Leave += new System.EventHandler(this.txt_sk600_Leave);
             // 
             // btn_print
@@ -472,7 +472,7 @@ namespace abb_retrofill_powerbreak
             this.txt_sk480.Name = "txt_sk480";
             this.txt_sk480.Size = new System.Drawing.Size(149, 25);
             this.txt_sk480.TabIndex = 164;
-            this.txt_sk480.Text = "SK480";
+            this.txt_sk480.Text = "480";
             this.txt_sk480.Leave += new System.EventHandler(this.txt_sk480_Leave);
             // 
             // label9
@@ -493,7 +493,7 @@ namespace abb_retrofill_powerbreak
             this.txt_sk240.Name = "txt_sk240";
             this.txt_sk240.Size = new System.Drawing.Size(149, 25);
             this.txt_sk240.TabIndex = 162;
-            this.txt_sk240.Text = "SK240";
+            this.txt_sk240.Text = "240";
             this.txt_sk240.Leave += new System.EventHandler(this.txt_sk240_Leave);
             // 
             // label7
@@ -514,7 +514,7 @@ namespace abb_retrofill_powerbreak
             this.txt_rating_plug.Name = "txt_rating_plug";
             this.txt_rating_plug.Size = new System.Drawing.Size(252, 25);
             this.txt_rating_plug.TabIndex = 160;
-            this.txt_rating_plug.Text = "RATINGS PLUG";
+            this.txt_rating_plug.Text = "RATE P.";
             this.txt_rating_plug.Leave += new System.EventHandler(this.txt_rating_plug_Leave);
             // 
             // label6
@@ -535,7 +535,7 @@ namespace abb_retrofill_powerbreak
             this.txt_config_no.Name = "txt_config_no";
             this.txt_config_no.Size = new System.Drawing.Size(252, 25);
             this.txt_config_no.TabIndex = 158;
-            this.txt_config_no.Text = "CONFIG NUMBER";
+            this.txt_config_no.Text = "CONFIG";
             this.txt_config_no.Leave += new System.EventHandler(this.txt_config_no_Leave);
             // 
             // label5
@@ -556,7 +556,7 @@ namespace abb_retrofill_powerbreak
             this.txt_amps_max.Name = "txt_amps_max";
             this.txt_amps_max.Size = new System.Drawing.Size(253, 25);
             this.txt_amps_max.TabIndex = 156;
-            this.txt_amps_max.Text = "AMPS MAX";
+            this.txt_amps_max.Text = "AMPS";
             this.txt_amps_max.Leave += new System.EventHandler(this.txt_amps_max_Leave);
             // 
             // label4
@@ -692,7 +692,7 @@ namespace abb_retrofill_powerbreak
             this.txt_new_dc.Name = "txt_new_dc";
             this.txt_new_dc.Size = new System.Drawing.Size(59, 25);
             this.txt_new_dc.TabIndex = 188;
-            this.txt_new_dc.Text = " NEW DC";
+            this.txt_new_dc.Text = "NEW DC";
             this.txt_new_dc.Leave += new System.EventHandler(this.txt_new_dc_Leave);
             // 
             // label16
@@ -713,7 +713,7 @@ namespace abb_retrofill_powerbreak
             this.txt_seral_number.Name = "txt_seral_number";
             this.txt_seral_number.Size = new System.Drawing.Size(149, 25);
             this.txt_seral_number.TabIndex = 189;
-            this.txt_seral_number.Text = "SERIAL NUMBER";
+            this.txt_seral_number.Text = "SN";
             this.txt_seral_number.Leave += new System.EventHandler(this.txt_seral_number_Leave);
             // 
             // powerbreak_reprint

@@ -39,7 +39,8 @@ namespace abb_retrofill_powerbreak
                 InitializePrintEngine();
                 label_paths = new label_files();
                 find_printers(combo_printer, label_paths.powerbreak_label);
-                preview_label(picbox_retro, label_paths.retrofill_label);
+                //preview_label(picbox_retro, label_paths.retrofill_label);
+                preview_retro_fac_unfuzede_label();
                 load_pic_box.Visible = false;
                 circularProgressBar2.Visible = false;
             }

@@ -40,7 +40,8 @@ namespace abb_retrofill_powerbreak
                 InitializePrintEngine();
                 label_paths = new label_files();
                 find_printers(combo_printer, label_paths.powerbreak_label);
-                preview_label(picbox_retro, label_paths.powerbreak_label);
+                //preview_label(picbox_retro, label_paths.powerbreak_label);
+                update_powerbreak_reprint_label();
                 load_pic_box.Visible = false;
                 circularProgressBar2.Visible = false;
             }
@@ -140,42 +141,49 @@ namespace abb_retrofill_powerbreak
 
         private void update_powerbreak_reprint_label()
         {
-            ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_paths.powerbreak_label);
-            label.Variables["InterruptingCapacity"].SetValue(txt_interrupt_cap.Text);
-            label.Variables["CatalogNo"].SetValue(txt_cat_number.Text.Replace(" ", String.Empty));
-            label.Variables["SerialNO"].SetValue(txt_seral_number.Text.Replace(" ", String.Empty));
-            label.Variables["ConfigNO"].SetValue(txt_config_no.Text.Replace(" ", String.Empty));
-            label.Variables["RatingPlug"].SetValue(txt_rating_plug.Text);
-            label.Variables["AmpsMax"].SetValue(txt_amps_max.Text);
-            label.Variables["SK240"].SetValue(txt_sk240.Text);
-            label.Variables["SK480"].SetValue(txt_sk480.Text);
-            label.Variables["SK600"].SetValue(txt_sk600.Text);
-            label.Variables["ShortTime"].SetValue(txt_short_time.Text);
-            label.Variables["NewDatecode"].SetValue(txt_new_dc.Text);
-            label.Variables["OldDatecode"].SetValue(txt_old_dc.Text);
-            label.Variables["ULFilePath"].SetValue(ul_path);
-            label.Variables["IssueNO"].SetValue(txt_issue_no.Text);
-            label.Variables["ULFilePath"].SetValue(ul_path);
-            ILabelPreviewSettings labelPreviewSettings = new LabelPreviewSettings();
-            labelPreviewSettings.ImageFormat = "PNG";
-            labelPreviewSettings.Width = this.picbox_retro.Width;
-            labelPreviewSettings.Height = this.picbox_retro.Height;
-            labelPreviewSettings.FormatPreviewSide = FormatPreviewSide.FrontSide;
-
-            // Generate Preview File
-            object imageObj = label.GetLabelPreview(labelPreviewSettings);
-
-            // Display image in UI
-            if (imageObj is byte[])
+            try
             {
-                // When PrintToFiles = false
-                // Convert byte[] to Bitmap and set as image source for PictureBox control
-                this.picbox_retro.Image = this.ByteToImage((byte[])imageObj);
+                ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(label_paths.powerbreak_label);
+                label.Variables["InterruptingCapacity"].SetValue(txt_interrupt_cap.Text);
+                label.Variables["CatalogNo"].SetValue(txt_cat_number.Text.Replace(" ", String.Empty));
+                label.Variables["SerialNO"].SetValue(txt_seral_number.Text.Replace(" ", String.Empty));
+                label.Variables["ConfigNO"].SetValue(txt_config_no.Text.Replace(" ", String.Empty));
+                label.Variables["RatingPlug"].SetValue(txt_rating_plug.Text);
+                label.Variables["AmpsMax"].SetValue(txt_amps_max.Text);
+                label.Variables["SK240"].SetValue(txt_sk240.Text);
+                label.Variables["SK480"].SetValue(txt_sk480.Text);
+                label.Variables["SK600"].SetValue(txt_sk600.Text);
+                label.Variables["ShortTime"].SetValue(txt_short_time.Text);
+                label.Variables["NewDatecode"].SetValue(txt_new_dc.Text);
+                label.Variables["OldDatecode"].SetValue(txt_old_dc.Text);
+                label.Variables["ULFilePath"].SetValue(ul_path);
+                label.Variables["IssueNO"].SetValue(txt_issue_no.Text);
+                label.Variables["ULFilePath"].SetValue(ul_path);
+                ILabelPreviewSettings labelPreviewSettings = new LabelPreviewSettings();
+                labelPreviewSettings.ImageFormat = "PNG";
+                labelPreviewSettings.Width = this.picbox_retro.Width;
+                labelPreviewSettings.Height = this.picbox_retro.Height;
+                labelPreviewSettings.FormatPreviewSide = FormatPreviewSide.FrontSide;
+
+                // Generate Preview File
+                object imageObj = label.GetLabelPreview(labelPreviewSettings);
+
+                // Display image in UI
+                if (imageObj is byte[])
+                {
+                    // When PrintToFiles = false
+                    // Convert byte[] to Bitmap and set as image source for PictureBox control
+                    this.picbox_retro.Image = this.ByteToImage((byte[])imageObj);
+                }
+                else if (imageObj is string)
+                {
+                    // When PrintToFiles = true
+                    this.picbox_retro.ImageLocation = (string)imageObj;
+                }
             }
-            else if (imageObj is string)
+            catch(Exception er)
             {
-                // When PrintToFiles = true
-                this.picbox_retro.ImageLocation = (string)imageObj;
+                MessageBox.Show(er.Message);
             }
         }
 

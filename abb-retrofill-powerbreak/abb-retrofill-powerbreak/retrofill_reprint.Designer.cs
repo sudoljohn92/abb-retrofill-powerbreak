@@ -531,7 +531,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_c.Name = "txt_val_c";
             this.txt_val_c.Size = new System.Drawing.Size(151, 25);
             this.txt_val_c.TabIndex = 131;
-            this.txt_val_c.Text = "FRAME SENSOR";
+            this.txt_val_c.Text = "VAL P";
             this.txt_val_c.Leave += new System.EventHandler(this.txt_val_c_Leave);
             // 
             // label8
@@ -552,7 +552,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_t.Name = "txt_val_t";
             this.txt_val_t.Size = new System.Drawing.Size(151, 25);
             this.txt_val_t.TabIndex = 133;
-            this.txt_val_t.Text = "FRAME SENSOR";
+            this.txt_val_t.Text = "VAL T";
             this.txt_val_t.Leave += new System.EventHandler(this.txt_val_t_Leave);
             // 
             // label11
@@ -573,7 +573,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_a.Name = "txt_val_a";
             this.txt_val_a.Size = new System.Drawing.Size(151, 25);
             this.txt_val_a.TabIndex = 135;
-            this.txt_val_a.Text = "MAX VOLT";
+            this.txt_val_a.Text = "VAL A";
             this.txt_val_a.Leave += new System.EventHandler(this.txt_val_a_Leave);
             // 
             // label12
@@ -594,7 +594,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_f.Name = "txt_val_f";
             this.txt_val_f.Size = new System.Drawing.Size(151, 25);
             this.txt_val_f.TabIndex = 137;
-            this.txt_val_f.Text = "INTERRUPT";
+            this.txt_val_f.Text = "VAL F";
             this.txt_val_f.Leave += new System.EventHandler(this.txt_val_f_Leave);
             // 
             // label1

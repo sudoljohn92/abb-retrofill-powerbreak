@@ -806,7 +806,7 @@ namespace abb_retrofill_powerbreak
             this.txt_val_t.Name = "txt_val_t";
             this.txt_val_t.Size = new System.Drawing.Size(151, 25);
             this.txt_val_t.TabIndex = 195;
-            this.txt_val_t.Text = " VAL T";
+            this.txt_val_t.Text = "VAL T";
             this.txt_val_t.Leave += new System.EventHandler(this.txt_val_t_Leave);
             // 
             // label23
