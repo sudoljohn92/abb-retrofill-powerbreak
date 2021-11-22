@@ -109,11 +109,11 @@ namespace abb_retrofill_powerbreak
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label19.Location = new System.Drawing.Point(395, 18);
+            this.label19.Location = new System.Drawing.Point(384, 20);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(143, 40);
+            this.label19.Size = new System.Drawing.Size(161, 40);
             this.label19.TabIndex = 51;
-            this.label19.Text = "Re-Prints";
+            this.label19.Text = "FreeForms";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox8
@@ -298,6 +298,7 @@ namespace abb_retrofill_powerbreak
             this.btn_print.TabIndex = 156;
             this.btn_print.Text = "Print";
             this.btn_print.UseVisualStyleBackColor = true;
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
             // label21
             // 

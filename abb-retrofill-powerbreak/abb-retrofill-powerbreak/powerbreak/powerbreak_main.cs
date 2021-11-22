@@ -35,7 +35,7 @@ namespace abb_retrofill_powerbreak.powerbreak
         public string config_number { get; set; }
         public string generated_new_date_code { get; set; }
         public string issue_number { get; set; }
-        public string ul_path { get; set; }
+        public string ul_path = @"C:\Projects\abb-retrofill-powerbreak\images\CuL.jpg";
         public bool ul_bool { get; set; }
         public bool powerbreak_bool { get; set; }
         private List<string> powerbreak_char_4_list { get; set; }
@@ -118,6 +118,7 @@ namespace abb_retrofill_powerbreak.powerbreak
         private void preview_label()
         {
             ILabel label = PrintEngineFactory.PrintEngine.OpenLabel(powerbreak_label.powerbreak_label);
+            label.Variables["ULFilePath"].SetValue(ul_path);
             label.Variables["NewDatecode"].SetValue(generated_new_date_code);
             label.Variables["IssueNO"].SetValue(issue_number);
             ILabelPreviewSettings labelPreviewSettings = new LabelPreviewSettings();
@@ -284,20 +285,6 @@ namespace abb_retrofill_powerbreak.powerbreak
             txtbox.Text.Replace(" ", String.Empty);
         }
 
-        private void ul_check_box_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ul_check_box.Checked)
-            {
-                ul_path = @"C:\Projects\abb-retrofill-powerbreak\images\CuL.jpg";
-                ul_bool = true;
-            }
-            else if(ul_check_box.Checked == false)
-            {
-                ul_path = "";
-                ul_bool = false;
-            }
-            update_powerbreak_label();
-        }
 
         private void btn_print_Click(object sender, EventArgs e)
         {
@@ -365,6 +352,33 @@ namespace abb_retrofill_powerbreak.powerbreak
             var interrupt_add = new misc_forms.retrofill_interrupt_add();
             Hide();
             interrupt_add.Show();
+        }
+
+        private void btn_reprints_Click(object sender, EventArgs e)
+        {
+            var reprint = new retrofill_reprint();
+            Hide();
+            reprint.Show();
+        }
+
+        private void btn_reports_Click(object sender, EventArgs e)
+        {
+            var reports = new abb_reports();
+            Hide();
+            reports.Show();
+        }
+
+        private void ul_check_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ul_check.Checked == true)
+            {
+                ul_path = @"C:\Projects\abb-retrofill-powerbreak\images\CuL.jpg";
+            }
+            else if(ul_check.Checked == false)
+            {
+                ul_path = "";
+            }
+            update_powerbreak_label();
         }
     }
 }

@@ -296,5 +296,10 @@ namespace abb_retrofill_powerbreak
             Hide();
             powerbreak_reprint.Show();
         }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -115,9 +115,9 @@ namespace abb_retrofill_powerbreak
             this.label19.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label19.Location = new System.Drawing.Point(398, 21);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(143, 40);
+            this.label19.Size = new System.Drawing.Size(161, 40);
             this.label19.TabIndex = 51;
-            this.label19.Text = "Re-Prints";
+            this.label19.Text = "FreeForms";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox8
@@ -584,11 +584,11 @@ namespace abb_retrofill_powerbreak
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(237, 142);
+            this.label3.Location = new System.Drawing.Point(213, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(274, 25);
+            this.label3.Size = new System.Drawing.Size(328, 25);
             this.label3.TabIndex = 153;
-            this.label3.Text = "Enter Fuzed Label Data Below";
+            this.label3.Text = "Enter Powerbreak Label Data Below";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2

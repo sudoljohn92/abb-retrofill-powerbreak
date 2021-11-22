@@ -607,8 +607,9 @@
             this.btn_reprints.Name = "btn_reprints";
             this.btn_reprints.Size = new System.Drawing.Size(114, 37);
             this.btn_reprints.TabIndex = 23;
-            this.btn_reprints.Text = "RePrints";
+            this.btn_reprints.Text = "FreeForm";
             this.btn_reprints.UseVisualStyleBackColor = false;
+            this.btn_reprints.Click += new System.EventHandler(this.btn_reprints_Click);
             // 
             // btn_reports
             // 
@@ -622,6 +623,7 @@
             this.btn_reports.TabIndex = 22;
             this.btn_reports.Text = "Reports";
             this.btn_reports.UseVisualStyleBackColor = false;
+            this.btn_reports.Click += new System.EventHandler(this.btn_reports_Click);
             // 
             // btn_interrupt
             // 

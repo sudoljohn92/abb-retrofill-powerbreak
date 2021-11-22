@@ -64,6 +64,7 @@ namespace abb_retrofill_powerbreak.misc_forms
             this.label11 = new System.Windows.Forms.Label();
             this.txt_j = new System.Windows.Forms.TextBox();
             this.btn_enter = new System.Windows.Forms.Button();
+            this.btn_free_forms = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -146,6 +147,7 @@ namespace abb_retrofill_powerbreak.misc_forms
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel3.Controls.Add(this.btn_free_forms);
             this.panel3.Controls.Add(this.btn_pwbreak);
             this.panel3.Controls.Add(this.btn_reports);
             this.panel3.Controls.Add(this.btn_retro);
@@ -463,6 +465,20 @@ namespace abb_retrofill_powerbreak.misc_forms
             this.btn_enter.UseVisualStyleBackColor = true;
             this.btn_enter.Click += new System.EventHandler(this.btn_enter_Click);
             // 
+            // btn_free_forms
+            // 
+            this.btn_free_forms.BackColor = System.Drawing.Color.Transparent;
+            this.btn_free_forms.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.btn_free_forms.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_free_forms.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_free_forms.Location = new System.Drawing.Point(7, 190);
+            this.btn_free_forms.Name = "btn_free_forms";
+            this.btn_free_forms.Size = new System.Drawing.Size(114, 37);
+            this.btn_free_forms.TabIndex = 20;
+            this.btn_free_forms.Text = "FreeForms";
+            this.btn_free_forms.UseVisualStyleBackColor = false;
+            this.btn_free_forms.Click += new System.EventHandler(this.btn_free_forms_Click);
+            // 
             // retrofill_interrupt_add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,5 +565,6 @@ namespace abb_retrofill_powerbreak.misc_forms
         private System.Windows.Forms.TextBox txt_j;
         private System.Windows.Forms.Button btn_enter;
         private System.Windows.Forms.Button btn_pwbreak;
+        private System.Windows.Forms.Button btn_free_forms;
     }
 }

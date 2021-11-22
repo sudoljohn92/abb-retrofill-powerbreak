@@ -634,9 +634,9 @@ namespace abb_retrofill_powerbreak.retrofill
             label.Variables["A45"].SetValue(side_label_type_3);
             label.Variables["A35"].SetValue(txt_breaker_type.Text);
             label.Variables["A36"].SetValue(frame_size);
-            label.Variables["A37"].SetValue("3");
-            label.Variables["A38"].SetValue(txt_interrupt_at_508.Text);
-            label.Variables["W"].SetValue(first_six);
+            label.Variables["val_37"].SetValue("3");
+            label.Variables["val_38"].SetValue(txt_interrupt_at_508.Text);
+            label.Variables["val_w"].SetValue(first_six);
             label.Variables["P"].SetValue(char_13);
             label.Print(1);
         }
@@ -655,6 +655,20 @@ namespace abb_retrofill_powerbreak.retrofill
             var interrupt_add = new misc_forms.retrofill_interrupt_add();
             Hide();
             interrupt_add.Show();
+        }
+
+        private void btn_reprints_Click(object sender, EventArgs e)
+        {
+            var reprint = new retrofill_reprint();
+            Hide();
+            reprint.Show();
+        }
+
+        private void btn_reports_Click(object sender, EventArgs e)
+        {
+            var reports = new abb_reports();
+            Hide();
+            reports.Show();
         }
     }
 }

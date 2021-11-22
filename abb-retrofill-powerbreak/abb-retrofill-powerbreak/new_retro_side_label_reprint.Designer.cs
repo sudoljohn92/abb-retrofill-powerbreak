@@ -123,7 +123,7 @@ namespace abb_retrofill_powerbreak
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(143, 40);
             this.label19.TabIndex = 51;
-            this.label19.Text = "Re-Prints";
+            this.label19.Text = "FreeForms";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5

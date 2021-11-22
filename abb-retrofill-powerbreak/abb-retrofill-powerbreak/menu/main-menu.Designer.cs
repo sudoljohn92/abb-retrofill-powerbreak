@@ -33,6 +33,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_close = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_reports = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_interrupt = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -98,6 +98,20 @@
             this.panel3.Size = new System.Drawing.Size(141, 333);
             this.panel3.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(11, 214);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 37);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "FreeForms";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // btn_reports
             // 
             this.btn_reports.BackColor = System.Drawing.Color.Transparent;
@@ -110,6 +124,7 @@
             this.btn_reports.TabIndex = 22;
             this.btn_reports.Text = "Reports";
             this.btn_reports.UseVisualStyleBackColor = false;
+            this.btn_reports.Click += new System.EventHandler(this.btn_reports_Click);
             // 
             // label1
             // 
@@ -195,20 +210,6 @@
             this.label3.TabIndex = 25;
             this.label3.Text = "To Navigate through the Dashboard\r\nRefer to these Navigation Buttons \r\nOn the Lef" +
     "t";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::abb_retrofill_powerbreak.Properties.Resources.abb_logo;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(11, 214);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 37);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "RePrints";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // main_menu
             // 

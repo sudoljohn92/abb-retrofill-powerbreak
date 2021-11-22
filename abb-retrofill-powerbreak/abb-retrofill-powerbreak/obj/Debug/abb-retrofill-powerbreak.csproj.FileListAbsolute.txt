@@ -47,3 +47,4 @@ C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powe
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.retrofill_side_reprint.resources
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.new_retro_side_label_reprint.resources
 C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.powerbreak_reprint.resources
+C:\Projects\abb-retrofill-powerbreak\abb-retrofill-powerbreak\abb-retrofill-powerbreak\obj\Debug\abb_retrofill_powerbreak.misc_forms.abb_reports.resources

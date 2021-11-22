@@ -64,5 +64,12 @@ namespace abb_retrofill_powerbreak.menu
             Hide();
             reprints.Show();
         }
+
+        private void btn_reports_Click(object sender, EventArgs e)
+        {
+            var reports = new abb_reports();
+            Hide();
+            reports.Show();
+        }
     }
 }

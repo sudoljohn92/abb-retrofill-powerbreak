@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System;
+using System.Data;
 
 namespace abb_retrofill_powerbreak.data_handlers
 {
     class database
     {
+        public DataTable report_data_table { get; set; }
         public List<string> char_4_power_list { get; set; }
         public List<string> char_13_list { get; set; }
         public List<string> unfuzed_list { get; set; }
@@ -256,6 +258,154 @@ namespace abb_retrofill_powerbreak.data_handlers
                 }
             }
             return found_sn;
+        }
+        public DataTable retrofill_ul_list_all()
+        {
+            report_data_table = new DataTable();
+            using (var connection = new SQLiteConnection(sql_lite_connection))
+            {
+                using (var cmd = new SQLiteCommand("SELECT * FROM retrofill_ul_history WHERE ul = 'TRUE'", connection))
+                {
+                    connection.Open();
+                    using (var adapter = new SQLiteDataAdapter())
+                    {
+                        adapter.SelectCommand = cmd;
+                        adapter.SelectCommand.Connection = connection;
+                        adapter.Fill(report_data_table);
+                        report_data_table.Columns[0].ColumnName = "ID";
+                        report_data_table.Columns[1].ColumnName = "Catalog Number";
+                        report_data_table.Columns[2].ColumnName = "Date/Time Stamp";
+                        report_data_table.Columns[3].ColumnName = "UL";
+                        report_data_table.Columns[4].ColumnName = "Serial Number";
+                    }
+                }
+            }
+            return report_data_table;
+        }
+
+        public DataTable powerbreak_ul_list_all()
+        {
+            report_data_table = new DataTable();
+            using (var connection = new SQLiteConnection(sql_lite_connection))
+            {
+                using (var cmd = new SQLiteCommand("SELECT id,catalog_no,serial_no,ul,print_date FROM powerbreak_ul_history WHERE ul = 'True'", connection))
+                {
+                    connection.Open();
+                    using (var adapter = new SQLiteDataAdapter())
+                    {
+                            adapter.SelectCommand = cmd;
+                            adapter.SelectCommand.Connection = connection;
+                            adapter.Fill(report_data_table);
+                            report_data_table.Columns[0].ColumnName = "ID";
+                            report_data_table.Columns[1].ColumnName = "Catalog Number";
+                            report_data_table.Columns[2].ColumnName = "Serial Number";
+                            report_data_table.Columns[3].ColumnName = "UL";
+                            report_data_table.Columns[4].ColumnName = "Print Date";
+                    }
+                }
+            }
+            return report_data_table;
+        }
+
+        public DataTable all_retrofill_print_history()
+        {
+            report_data_table = new DataTable();
+            using (var connection = new SQLiteConnection(sql_lite_connection))
+            {
+                using (var cmd = new SQLiteCommand("SELECT * FROM retrofill_ul_history", connection))
+                {
+                    connection.Open();
+                    using (var adapter = new SQLiteDataAdapter())
+                    {
+                        adapter.SelectCommand = cmd;
+                        adapter.SelectCommand.Connection = connection;
+                        adapter.Fill(report_data_table);
+                        report_data_table.Columns[0].ColumnName = "ID";
+                        report_data_table.Columns[1].ColumnName = "Catalog Number";
+                        report_data_table.Columns[2].ColumnName = "Date";
+                        report_data_table.Columns[3].ColumnName = "UL";
+                        report_data_table.Columns[4].ColumnName = "Serial Number";
+                    }
+                }
+            }
+            return report_data_table;
+        }
+
+        public DataTable powerbreak_list_all()
+        {
+            report_data_table = new DataTable();
+            using (var connection = new SQLiteConnection(sql_lite_connection))
+            {
+                using (var cmd = new SQLiteCommand("SELECT id,catalog_no,print_date ,ul,serial_no  FROM powerbreak_ul_history", connection))
+                {
+                    connection.Open();
+                    using (var adapter = new SQLiteDataAdapter())
+                    {
+                        adapter.SelectCommand = cmd;
+                        adapter.SelectCommand.Connection = connection;
+                        adapter.Fill(report_data_table);
+                        report_data_table.Columns[0].ColumnName = "ID";
+                        report_data_table.Columns[1].ColumnName = "Catalog Number";
+                        report_data_table.Columns[2].ColumnName = "Serial Number";
+                        report_data_table.Columns[3].ColumnName = "UL";
+                        report_data_table.Columns[4].ColumnName = "Print Date";
+                    }
+                }
+            }
+            return report_data_table;
+        }
+
+        public DataTable retrofill_ul_list_date_range(string start_date, string end_date)
+        {
+            report_data_table = new DataTable();
+            using (var connection = new SQLiteConnection(sql_lite_connection))
+            {
+                using (var cmd = new SQLiteCommand("SELECT * FROM retrofill_ul_history WHERE date_time_stamp BETWEEN @sd and @ed and ul = 'TRUE'", connection))
+                {
+                    cmd.Parameters.AddWithValue("@sd", start_date);
+                    cmd.Parameters.AddWithValue("@ed", end_date);
+                    connection.Open();
+                    using (var adapter = new SQLiteDataAdapter())
+                    {
+                        adapter.SelectCommand = cmd;
+                        adapter.SelectCommand.Connection = connection;
+                        adapter.Fill(report_data_table);
+                        report_data_table.Columns[0].ColumnName = "ID";
+                        report_data_table.Columns[1].ColumnName = "Catalog Number";
+                        report_data_table.Columns[2].ColumnName = "Serial Number";
+                        report_data_table.Columns[3].ColumnName = "UL";
+                        report_data_table.Columns[4].ColumnName = "Print Date";
+                    }
+                }
+            }
+            return report_data_table;
+        }
+
+        public DataTable powerbreak_ul_list_date_range(string start_date, string end_date)
+        {
+            report_data_table = new DataTable();
+            using (var connection = new SQLiteConnection(sql_lite_connection))
+            {
+                using (var cmd = new SQLiteCommand("SELECT id,catalog_no,print_date ,ul,serial_no FROM powerbreak_ul_history WHERE print_date BETWEEN @sd and @ed and ul = 'True'", connection))
+                {
+                    cmd.Parameters.AddWithValue("@sd", start_date);
+                    cmd.Parameters.AddWithValue("@ed", end_date);
+                    connection.Open();
+                    using (var adapter = new SQLiteDataAdapter())
+                    {
+                        adapter.SelectCommand = cmd;
+                        adapter.SelectCommand.Connection = connection;
+                        adapter.Fill(report_data_table);
+                        report_data_table.Columns[0].ColumnName = "ID";
+                        report_data_table.Columns[1].ColumnName = "Catalog Number";
+                        report_data_table.Columns[2].ColumnName = "Date/Time Stamp";
+                        report_data_table.Columns[3].ColumnName = "UL";
+                        report_data_table.Columns[4].ColumnName = "Serial Number";
+                        report_data_table.Columns[4].DataType = typeof(string);
+                    }
+                }
+            }
+            return report_data_table;
         }
     }
 }

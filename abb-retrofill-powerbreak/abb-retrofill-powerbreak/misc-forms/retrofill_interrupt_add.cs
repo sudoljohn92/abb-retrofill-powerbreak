@@ -78,7 +78,9 @@ namespace abb_retrofill_powerbreak.misc_forms
 
         private void btn_reports_Click(object sender, EventArgs e)
         {
-
+            var reports = new abb_reports();
+            Hide();
+            reports.Show(); 
         }
 
         private void btn_pwbreak_Click(object sender, EventArgs e)
@@ -172,6 +174,13 @@ namespace abb_retrofill_powerbreak.misc_forms
             ToolTip tip = new ToolTip();
             tip.IsBalloon = true;
             tip.Show("The Interrupt Value for the " + txt_six_dig.Text + " have been previously added", txt_six_dig, 10000);
+        }
+
+        private void btn_free_forms_Click(object sender, EventArgs e)
+        {
+            var re_prints = new retrofill_reprint();
+            Hide();
+            re_prints.Show();
         }
     }
 }
